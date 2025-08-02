@@ -1,0 +1,37 @@
+{
+  "name": "simple-invoice-generator",
+  "version": "1.0.0",
+  "description": "WordPress plugin for generating invoices with React frontend",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack --watch --mode development",
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode development --open"
+  },
+  "keywords": ["wordpress", "invoice", "generator", "react"],
+  "author": "",
+  "license": "GPL-2.0-or-later",
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "@babel/preset-react": "^7.22.0",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "@wordpress/element": "^5.24.0",
+    "jspdf": "^2.5.1",
+    "html2canvas": "^1.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@dnd-kit/core": "^6.1.0",
+    "@dnd-kit/sortable": "^8.0.0",
+    "@dnd-kit/utilities": "^3.2.2",
+    "uuid": "^9.0.1"
+  }
+}

@@ -1,0 +1,1114 @@
+/* Simple Invoice Generator Styles */
+
+/* Container */
+.sig-invoice-generator-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.sig-invoice-generator {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.sig-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sig-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.sig-header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Tab Switcher */
+.sig-tab-switcher {
+    display: flex;
+    background: #f5f5f5;
+    border-radius: 6px;
+    padding: 2px;
+}
+
+.sig-tab {
+    padding: 8px 20px;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.2s ease;
+}
+
+.sig-tab:hover {
+    color: #333;
+}
+
+.sig-tab.active {
+    background: #ffffff;
+    color: #2c3e50;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Layout */
+.sig-content {
+    padding: 30px;
+}
+
+.sig-edit-mode {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+@media (max-width: 968px) {
+    .sig-edit-mode {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Sections */
+.sig-section {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.sig-section h3 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+}
+
+.sig-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sig-section-header h3 {
+    margin: 0;
+}
+
+/* Form Elements */
+.sig-form-group {
+    margin-bottom: 20px;
+}
+
+.sig-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+    font-size: 14px;
+}
+
+.sig-form-group input,
+.sig-form-group textarea,
+.sig-form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.sig-form-group input:focus,
+.sig-form-group textarea:focus,
+.sig-form-group select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.sig-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.sig-input-group {
+    display: flex;
+    gap: 5px;
+}
+
+.sig-input-small {
+    width: 80px !important;
+}
+
+/* Logo Upload */
+.sig-logo-upload {
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.sig-logo-upload:hover,
+.sig-logo-upload.drag-over {
+    border-color: #3498db;
+    background: #f0f8ff;
+}
+
+.sig-logo-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #999;
+}
+
+.sig-logo-preview {
+    position: relative;
+    display: inline-block;
+}
+
+.sig-logo-preview img {
+    max-width: 200px;
+    max-height: 100px;
+    border-radius: 4px;
+}
+
+.sig-remove-logo {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons */
+.sig-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sig-btn-primary {
+    background: #3498db;
+    color: white;
+}
+
+.sig-btn-primary:hover {
+    background: #2980b9;
+}
+
+.sig-btn-secondary {
+    background: #95a5a6;
+    color: white;
+}
+
+.sig-btn-secondary:hover {
+    background: #7f8c8d;
+}
+
+.sig-btn-outline {
+    background: transparent;
+    color: #3498db;
+    border: 1px solid #3498db;
+}
+
+.sig-btn-outline:hover {
+    background: #3498db;
+    color: white;
+}
+
+.sig-btn-small {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.sig-btn-add-item {
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+    background: #f5f5f5;
+    color: #666;
+    border: 1px dashed #ddd;
+}
+
+.sig-btn-add-item:hover {
+    background: #e8e8e8;
+    border-style: solid;
+}
+
+/* Line Items Table */
+.sig-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.sig-line-items-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sig-line-items-table th {
+    background: #f5f5f5;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #555;
+    font-size: 14px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.sig-line-items-table td {
+    padding: 8px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: top;
+}
+
+.sig-drag-cell {
+    width: 30px;
+    cursor: move;
+}
+
+.sig-drag-handle {
+    display: inline-block;
+    color: #999;
+    font-size: 18px;
+    user-select: none;
+}
+
+.sig-description-cell textarea {
+    width: 100%;
+    min-width: 200px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.sig-description-cell textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.sig-quantity-cell input,
+.sig-rate-cell input {
+    width: 80px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: right;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.sig-quantity-cell input:focus,
+.sig-rate-cell input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.sig-currency-input {
+    display: flex;
+    align-items: center;
+}
+
+.sig-currency-symbol {
+    margin-right: 5px;
+    color: #666;
+}
+
+.sig-amount-cell {
+    text-align: right;
+    font-weight: 500;
+    min-width: 100px;
+}
+
+.sig-actions-cell {
+    width: 40px;
+    text-align: center;
+}
+
+.sig-btn-remove {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.sig-btn-remove:hover {
+    background: #c0392b;
+}
+
+.sig-sortable-helper {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    opacity: 0.9;
+}
+
+.sig-limit-warning {
+    color: #e74c3c;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* Calculations Panel */
+.sig-calculations-grid {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.sig-calc-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.sig-calc-row:last-child {
+    border-bottom: none;
+}
+
+.sig-calc-label {
+    font-weight: 500;
+    color: #555;
+}
+
+.sig-calc-label-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.sig-calc-value {
+    font-weight: 600;
+    color: #333;
+}
+
+.sig-discount-controls,
+.sig-tax-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sig-discount-input,
+.sig-tax-input,
+.sig-shipping-input {
+    width: 80px !important;
+    padding: 10px 12px !important;
+    text-align: right;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    transition: border-color 0.3s ease !important;
+}
+
+.sig-discount-input:focus,
+.sig-tax-input:focus,
+.sig-shipping-input:focus {
+    outline: none !important;
+    border-color: #3498db !important;
+}
+
+.sig-discount-type {
+    width: 60px !important;
+    padding: 10px 12px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    transition: border-color 0.3s ease !important;
+}
+
+.sig-discount-type:focus {
+    outline: none !important;
+    border-color: #3498db !important;
+}
+
+.sig-shipping-description {
+    width: 150px !important;
+    padding: 10px 12px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+    transition: border-color 0.3s ease !important;
+}
+
+.sig-shipping-description:focus {
+    outline: none !important;
+    border-color: #3498db !important;
+}
+
+.sig-total-row {
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.sig-total-value {
+    font-size: 20px;
+    color: #2c3e50;
+}
+
+/* Additional Fields */
+.sig-additional-fields {
+    margin-top: 30px;
+}
+
+.sig-additional-fields textarea {
+    resize: vertical;
+}
+
+/* Template Customizer */
+.sig-customizer-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100vh;
+    background: white;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.sig-customizer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sig-close-btn {
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+}
+
+.sig-close-btn:hover {
+    color: #333;
+}
+
+.sig-customizer-content {
+    padding: 20px;
+}
+
+.sig-customizer-section {
+    margin-bottom: 30px;
+}
+
+.sig-customizer-section h4 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.sig-color-schemes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.sig-color-scheme-btn {
+    position: relative;
+    width: 80px;
+    height: 50px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: capitalize;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sig-color-scheme-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: #333;
+}
+
+.sig-color-scheme-btn.active {
+    border-color: #2c3e50;
+    box-shadow: 0 0 0 2px rgba(44, 62, 80, 0.3);
+}
+
+.sig-color-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sig-color-input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sig-color-input-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.sig-color-input-wrapper input[type="color"] {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.sig-color-input-wrapper input[type="color"]:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.sig-color-input-wrapper input[type="text"] {
+    width: 80px;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.sig-color-input-wrapper input[type="text"]:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.sig-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sig-checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.sig-logo-position {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.sig-logo-position select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+    margin-top: 5px;
+}
+
+.sig-logo-position select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* Layout Grid */
+.sig-layout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+}
+
+.sig-layout-option {
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.sig-layout-option:hover {
+    border-color: #3498db;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.15);
+    transform: translateY(-1px);
+}
+
+.sig-layout-option.active {
+    border-color: #2c3e50;
+    background: #f8f9fa;
+    box-shadow: 0 0 0 2px rgba(44, 62, 80, 0.2);
+}
+
+.sig-layout-preview-container {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.sig-layout-preview {
+    width: 60px;
+    height: 72px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background: #ffffff;
+}
+
+.sig-layout-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.sig-layout-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.sig-layout-description {
+    font-size: 10px;
+    color: #666;
+    line-height: 1.2;
+}
+
+.sig-customizer-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Invoice Preview Styles */
+.sig-invoice-preview {
+    background: var(--background-color);
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+.sig-invoice-header {
+    margin-bottom: 30px;
+}
+
+.sig-header-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.sig-header-content.sig-logo-left {
+    flex-direction: row;
+}
+
+.sig-header-content.sig-logo-center {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.sig-header-content.sig-logo-right {
+    flex-direction: row-reverse;
+}
+
+.sig-company-logo img {
+    max-width: 150px;
+    max-height: 80px;
+}
+
+.sig-company-info h1 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.sig-company-info .sig-address {
+    white-space: pre-line;
+    margin: 10px 0;
+}
+
+.sig-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.sig-invoice-title {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.sig-invoice-title h2 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.sig-invoice-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.sig-bill-to h3,
+.sig-invoice-details table {
+    margin: 0 0 15px 0;
+    color: var(--primary-color);
+}
+
+.sig-client-details {
+    line-height: 1.6;
+}
+
+.sig-client-details strong {
+    color: var(--primary-color);
+}
+
+.sig-invoice-details table {
+    width: 100%;
+}
+
+.sig-invoice-details td {
+    padding: 5px 0;
+}
+
+.sig-invoice-details td:first-child {
+    color: var(--secondary-color);
+}
+
+.sig-invoice-details td:last-child {
+    text-align: right;
+}
+
+.sig-invoice-items {
+    margin: 30px 0;
+}
+
+.sig-invoice-items table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.sig-invoice-items th {
+    background: var(--primary-color);
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.sig-invoice-items th:last-child {
+    text-align: right;
+}
+
+.sig-invoice-items td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sig-item-description {
+    white-space: pre-line;
+}
+
+.sig-item-quantity,
+.sig-item-rate,
+.sig-item-amount {
+    text-align: right;
+}
+
+.sig-invoice-totals {
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px 0;
+}
+
+.sig-totals-container {
+    width: 300px;
+}
+
+.sig-total-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.sig-total-final {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.sig-invoice-additional {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.sig-additional-section {
+    margin-bottom: 20px;
+}
+
+.sig-additional-section h4 {
+    margin: 0 0 10px 0;
+    color: var(--primary-color);
+}
+
+.sig-additional-section p {
+    white-space: pre-line;
+    line-height: 1.6;
+}
+
+.sig-invoice-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--secondary-color);
+}
+
+/* Export Controls */
+.sig-export-controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.sig-export-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.sig-error-message {
+    margin-top: 15px;
+    padding: 10px;
+    background: #fee;
+    color: #c33;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Layout Variations */
+.sig-layout-compact .sig-invoice-preview {
+    padding: 20px;
+}
+
+.sig-layout-compact .sig-invoice-title {
+    margin: 15px 0;
+}
+
+.sig-layout-compact .sig-invoice-title h2 {
+    font-size: 24px;
+}
+
+.sig-layout-detailed .sig-invoice-items td {
+    padding: 15px;
+}
+
+.sig-layout-detailed .sig-additional-section {
+    margin-bottom: 30px;
+}
+
+/* Modern Layout */
+.sig-layout-modern .sig-invoice-preview {
+    background: linear-gradient(135deg, var(--background-color) 0%, rgba(52, 152, 219, 0.05) 100%);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.sig-layout-modern .sig-invoice-title h2 {
+    font-size: 36px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.sig-layout-modern .sig-invoice-items th {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.sig-layout-modern .sig-company-info h1 {
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Classic Layout */
+.sig-layout-classic .sig-invoice-preview {
+    border: 3px double var(--border-color);
+    background: var(--background-color);
+}
+
+.sig-layout-classic .sig-invoice-title {
+    border-bottom: 2px solid var(--primary-color);
+    border-top: 2px solid var(--primary-color);
+    padding: 15px 0;
+    margin: 20px 0;
+}
+
+.sig-layout-classic .sig-invoice-title h2 {
+    font-family: serif;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.sig-layout-classic .sig-company-info h1 {
+    font-family: serif;
+    font-weight: bold;
+}
+
+.sig-layout-classic .sig-invoice-items th {
+    border-bottom: 2px solid var(--primary-color);
+    border-top: 2px solid var(--primary-color);
+    background: transparent;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Minimal Layout */
+.sig-layout-minimal .sig-invoice-preview {
+    padding: 60px;
+    background: var(--background-color);
+    box-shadow: none;
+    border: 1px solid var(--border-color);
+}
+
+.sig-layout-minimal .sig-invoice-title {
+    text-align: left;
+    margin: 40px 0;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.sig-layout-minimal .sig-invoice-title h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.sig-layout-minimal .sig-invoice-items th {
+    background: transparent;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--border-color);
+    font-weight: 600;
+    padding: 8px 12px;
+}
+
+.sig-layout-minimal .sig-invoice-items td {
+    border-bottom: 1px solid #f0f0f0;
+    padding: 10px 12px;
+}
+
+.sig-layout-minimal .sig-company-info h1 {
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sig-invoice-generator-container {
+        padding: 10px;
+    }
+    
+    .sig-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .sig-invoice-meta {
+        grid-template-columns: 1fr;
+    }
+    
+    .sig-customizer-panel {
+        width: 100%;
+    }
+    
+    .sig-form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .sig-export-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .sig-invoice-preview {
+        box-shadow: none;
+        padding: 0;
+    }
+    
+    .sig-no-print {
+        display: none !important;
+    }
+}

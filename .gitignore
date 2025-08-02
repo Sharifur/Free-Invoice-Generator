@@ -1,0 +1,5 @@
+/node_modules
+/.claude
+/.idea
+/.vs-code
+.DS_Store
