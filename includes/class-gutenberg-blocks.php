@@ -109,6 +109,12 @@ class SIG_Gutenberg_Blocks {
         if (file_exists($faq_block_path . 'block.json')) {
             register_block_type($faq_block_path);
         }
+        
+        // Register related tools block
+        $related_tools_block_path = SIG_PLUGIN_DIR . 'blocks/related-tools/';
+        if (file_exists($related_tools_block_path . 'block.json')) {
+            register_block_type($related_tools_block_path);
+        }
     }
     
     /**
@@ -151,7 +157,8 @@ class SIG_Gutenberg_Blocks {
             has_block('sig/benefits-section') ||
             has_block('sig/best-practices') ||
             has_block('sig/legal-compliance') ||
-            has_block('sig/faq-section')) {
+            has_block('sig/faq-section') ||
+            has_block('sig/related-tools')) {
             
             wp_enqueue_style(
                 'sig-blocks-style',

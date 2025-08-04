@@ -1,0 +1,145 @@
+.wp-block-sig-related-tools {
+    padding: 40px 20px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.wp-block-sig-related-tools[data-align="full"] {
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
+.wp-block-sig-related-tools[data-align="full"] .ib-related-tools-section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.ib-related-tools-section .ib-section-title,
+.ib-related-tools-section .ib-section-subtitle,
+.ib-related-tools-section .ib-tool-name,
+.ib-related-tools-section .ib-tool-tagline,
+.ib-related-tools-section .ib-tool-description {
+    cursor: text;
+}
+
+.block-editor-block-list__layout .wp-block-sig-related-tools {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+}
+
+.editor-styles-wrapper .wp-block-sig-related-tools {
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
+.ib-tool-controls {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.ib-tool-card {
+    position: relative;
+}
+
+.ib-tool-settings {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.ib-tool-settings .components-base-control {
+    margin-bottom: 15px;
+}
+
+.ib-tool-settings .components-base-control:last-child {
+    margin-bottom: 0;
+}
+
+.ib-tool-features {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.ib-tool-features strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+}
+
+.ib-tool-features .components-flex {
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ib-tool-features .components-flex:last-of-type {
+    margin-bottom: 15px;
+}
+
+.ib-tool-features .components-text-control__input {
+    font-size: 14px;
+}
+
+.ib-tool-card .ib-tool-cta {
+    pointer-events: none;
+}
+
+/* Editor-specific badge positioning */
+.ib-badge-new,
+.ib-badge-popular {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+}
+
+/* Ensure proper stacking in editor */
+.ib-tool-controls {
+    z-index: 10;
+}
+
+.ib-badge-new,
+.ib-badge-popular {
+    z-index: 5;
+}
+
+.ib-tool-header::after {
+    z-index: 1;
+}
+
+.ib-tool-name,
+.ib-tool-tagline {
+    z-index: 2;
+}
+
+/* Better visibility for editing */
+.ib-tool-card:hover .ib-tool-controls {
+    opacity: 1;
+}
+
+.ib-tool-controls {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+/* Responsive editor styles */
+@media (max-width: 768px) {
+    .wp-block-sig-related-tools[data-align="full"] {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    
+    .ib-tools-grid {
+        grid-template-columns: 1fr;
+    }
+}

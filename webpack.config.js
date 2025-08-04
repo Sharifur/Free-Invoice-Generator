@@ -10,7 +10,8 @@ module.exports = {
     'benefits-section': './blocks/benefits-section/src/index.js',
     'best-practices': './blocks/best-practices/src/index.js',
     'legal-compliance': './blocks/legal-compliance/src/index.js',
-    'faq-section': './blocks/faq-section/src/index.js'
+    'faq-section': './blocks/faq-section/src/index.js',
+    'related-tools': './blocks/related-tools/src/index.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

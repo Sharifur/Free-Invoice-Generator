@@ -30,26 +30,13 @@
 
 /* Full width container adjustments */
 .ib-faq-section.alignfull .ib-container {
-    max-width: none;
+    max-width: 1200px;
     padding: 0 40px;
-}
-
-/* Remove padding for CTA section in full width */
-.ib-faq-section.alignfull .ib-container > .ib-cta-section {
-    margin-left: -40px;
-    margin-right: -40px;
-    width: calc(100% + 80px);
 }
 
 @media (max-width: 768px) {
     .ib-faq-section.alignfull .ib-container {
         padding: 0 20px;
-    }
-    
-    .ib-faq-section.alignfull .ib-container > .ib-cta-section {
-        margin-left: -20px;
-        margin-right: -20px;
-        width: calc(100% + 40px);
     }
 }
 
@@ -263,13 +250,13 @@
     margin-right: 0;
 }
 
-/* Full width CTA for alignfull FAQ sections */
+/* CTA section stays within container for alignfull FAQ sections */
 .ib-faq-section.alignfull .ib-cta-section {
-    width: 100vw;
-    max-width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    border-radius: 0;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 16px;
 }
 
 .ib-cta-title {

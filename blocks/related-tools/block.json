@@ -1,0 +1,148 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/related-tools",
+    "version": "1.0.0",
+    "title": "Related Tools",
+    "category": "sig-blocks",
+    "icon": "admin-tools",
+    "description": "Showcase related business tools and resources to users",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        },
+        "title": {
+            "type": "string",
+            "default": "More Free Business Tools"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Streamline your business operations with our complete suite of free tools"
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#f8f9fa"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "gradientStartColor": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "gradientEndColor": {
+            "type": "string",
+            "default": "#764ba2"
+        },
+        "headerTextColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "tools": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "receipt-generator",
+                    "name": "Receipt Generator",
+                    "tagline": "Create professional receipts instantly",
+                    "description": "Generate detailed receipts for your transactions. Perfect for retail, services, and online businesses.",
+                    "url": "/tools/receipt-generator",
+                    "badge": "Popular",
+                    "badgeType": "popular",
+                    "features": [
+                        "Multiple receipt templates",
+                        "Add payment methods",
+                        "Include tax calculations",
+                        "Print-ready format"
+                    ]
+                },
+                {
+                    "id": "quote-generator",
+                    "name": "Quote Generator",
+                    "tagline": "Professional quotes that win clients",
+                    "description": "Create compelling business quotes and proposals. Convert prospects into customers with professional quotes.",
+                    "url": "/tools/quote-generator",
+                    "badge": "New",
+                    "badgeType": "new",
+                    "features": [
+                        "Customizable quote templates",
+                        "Validity period settings",
+                        "Terms and conditions",
+                        "Client approval tracking"
+                    ]
+                },
+                {
+                    "id": "expense-tracker",
+                    "name": "Expense Tracker",
+                    "tagline": "Monitor business expenses easily",
+                    "description": "Keep track of all your business expenses in one place. Categorize, analyze, and export expense reports.",
+                    "url": "/tools/expense-tracker",
+                    "badge": "",
+                    "badgeType": "",
+                    "features": [
+                        "Expense categorization",
+                        "Receipt attachment",
+                        "Monthly reports",
+                        "Export to CSV/PDF"
+                    ]
+                },
+                {
+                    "id": "time-tracker",
+                    "name": "Time Tracker",
+                    "tagline": "Bill accurately for your time",
+                    "description": "Track billable hours for projects and clients. Generate time reports for accurate invoicing.",
+                    "url": "/tools/time-tracker",
+                    "badge": "",
+                    "badgeType": "",
+                    "features": [
+                        "Project-based tracking",
+                        "Hourly rate calculator",
+                        "Client time reports",
+                        "Invoice integration"
+                    ]
+                },
+                {
+                    "id": "business-card-maker",
+                    "name": "Business Card Maker",
+                    "tagline": "Design professional business cards",
+                    "description": "Create stunning business cards with our easy-to-use designer. Multiple templates and customization options.",
+                    "url": "/tools/business-card-maker",
+                    "badge": "",
+                    "badgeType": "",
+                    "features": [
+                        "Modern card designs",
+                        "QR code generator",
+                        "Print-ready files",
+                        "Digital card option"
+                    ]
+                },
+                {
+                    "id": "pay-stub-generator",
+                    "name": "Pay Stub Generator",
+                    "tagline": "Create employee pay stubs",
+                    "description": "Generate professional pay stubs for your employees. Include all deductions, taxes, and earnings details.",
+                    "url": "/tools/pay-stub-generator",
+                    "badge": "",
+                    "badgeType": "",
+                    "features": [
+                        "Tax calculations",
+                        "Multiple deduction types",
+                        "YTD earnings tracking",
+                        "Compliance ready"
+                    ]
+                }
+            ]
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/related-tools.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css"
+}
