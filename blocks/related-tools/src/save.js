@@ -9,13 +9,17 @@ export default function save({ attributes }) {
         gradientStartColor,
         gradientEndColor,
         headerTextColor,
-        tools
+        tools,
+        topPadding,
+        bottomPadding
     } = attributes;
 
     const blockProps = useBlockProps.save({
         className: 'ib-related-tools-section',
         style: {
-            backgroundColor: backgroundColor
+            backgroundColor: backgroundColor,
+            paddingTop: `${topPadding}px`,
+            paddingBottom: `${bottomPadding}px`
         }
     });
 

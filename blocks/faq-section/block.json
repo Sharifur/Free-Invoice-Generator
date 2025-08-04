@@ -143,6 +143,14 @@
         "ctaButtonHoverColor": {
             "type": "string",
             "default": "#f8f9fa"
+        },
+        "topPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "bottomPadding": {
+            "type": "number",
+            "default": 80
         }
     },
     "textdomain": "simple-invoice-generator",

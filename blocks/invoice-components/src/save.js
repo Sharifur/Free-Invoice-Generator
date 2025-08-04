@@ -7,13 +7,17 @@ export default function save({ attributes }) {
         backgroundColor,
         accentColor,
         mockupData,
-        components
+        components,
+        topPadding,
+        bottomPadding
     } = attributes;
 
     const blockProps = useBlockProps.save({
         className: 'ib-components-section',
         style: {
-            backgroundColor: backgroundColor
+            backgroundColor: backgroundColor,
+            paddingTop: `${topPadding}px`,
+            paddingBottom: `${bottomPadding}px`
         }
     });
 

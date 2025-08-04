@@ -17,13 +17,17 @@ export default function save({ attributes }) {
         proTipsContent,
         ctaText,
         ctaUrl,
-        showIcons
+        showIcons,
+        topPadding,
+        bottomPadding
     } = attributes;
 
     const blockProps = useBlockProps.save({
         className: 'ib-practices-section',
         style: {
-            backgroundColor: backgroundColor
+            backgroundColor: backgroundColor,
+            paddingTop: `${topPadding}px`,
+            paddingBottom: `${bottomPadding}px`
         }
     });
 

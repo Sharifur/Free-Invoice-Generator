@@ -12,13 +12,17 @@ export default function save({ attributes }) {
         steps,
         ctaText,
         ctaLink,
-        showCta
+        showCta,
+        topPadding,
+        bottomPadding
     } = attributes;
 
     const blockProps = useBlockProps.save({
         className: 'ib-steps-section',
         style: {
-            backgroundColor: backgroundColor
+            backgroundColor: backgroundColor,
+            paddingTop: `${topPadding}px`,
+            paddingBottom: `${bottomPadding}px`
         }
     });
 

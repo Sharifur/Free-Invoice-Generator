@@ -23,13 +23,17 @@ export default function save({ attributes }) {
         ctaTextColor,
         ctaButtonBackgroundColor,
         ctaButtonHoverColor,
-        ctaButtonTextColor
+        ctaButtonTextColor,
+        topPadding,
+        bottomPadding
     } = attributes;
 
     const blockProps = useBlockProps.save({
         className: 'ib-legal-section',
         style: {
-            background: `linear-gradient(to bottom, ${backgroundColor}, ${gradientEndColor})`
+            background: `linear-gradient(to bottom, ${backgroundColor}, ${gradientEndColor})`,
+            paddingTop: `${topPadding}px`,
+            paddingBottom: `${bottomPadding}px`
         }
     });
 

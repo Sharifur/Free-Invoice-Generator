@@ -165,6 +165,14 @@
                     "imageId": null
                 }
             ]
+        },
+        "topPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "bottomPadding": {
+            "type": "number",
+            "default": 80
         }
     },
     "textdomain": "simple-invoice-generator",

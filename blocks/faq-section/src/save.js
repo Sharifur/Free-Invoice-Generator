@@ -19,13 +19,17 @@ export default function save({ attributes }) {
         ctaTextColor,
         ctaButtonBackgroundColor,
         ctaButtonTextColor,
-        ctaButtonHoverColor
+        ctaButtonHoverColor,
+        topPadding,
+        bottomPadding
     } = attributes;
 
     const blockProps = useBlockProps.save({
         className: 'ib-faq-section',
         style: {
-            backgroundColor: backgroundColor
+            backgroundColor: backgroundColor,
+            paddingTop: `${topPadding}px`,
+            paddingBottom: `${bottomPadding}px`
         }
     });
 

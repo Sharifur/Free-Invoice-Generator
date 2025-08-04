@@ -15,7 +15,8 @@ import {
     TextareaControl,
     ToggleControl,
     Flex,
-    FlexItem
+    FlexItem,
+    RangeControl
 } from '@wordpress/components';
 import { Fragment } from '@wordpress/element';
 
@@ -36,13 +37,17 @@ export default function Edit({ attributes, setAttributes }) {
         proTipsContent,
         ctaText,
         ctaUrl,
-        showIcons
+        showIcons,
+        topPadding,
+        bottomPadding
     } = attributes;
 
     const blockProps = useBlockProps({
         className: 'ib-practices-section',
         style: {
-            backgroundColor: backgroundColor
+            backgroundColor: backgroundColor,
+            paddingTop: `${topPadding}px`,
+            paddingBottom: `${bottomPadding}px`
         }
     });
 
@@ -229,6 +234,25 @@ export default function Edit({ attributes, setAttributes }) {
                             {__('Add Mistake', 'simple-invoice-generator')}
                         </Button>
                     )}
+                </PanelBody>
+
+                <PanelBody title={__('Spacing Settings', 'simple-invoice-generator')} initialOpen={false}>
+                    <RangeControl
+                        label={__('Top Padding (px)', 'simple-invoice-generator')}
+                        value={topPadding}
+                        onChange={(value) => setAttributes({ topPadding: value })}
+                        min={0}
+                        max={200}
+                        step={5}
+                    />
+                    <RangeControl
+                        label={__('Bottom Padding (px)', 'simple-invoice-generator')}
+                        value={bottomPadding}
+                        onChange={(value) => setAttributes({ bottomPadding: value })}
+                        min={0}
+                        max={200}
+                        step={5}
+                    />
                 </PanelBody>
             </InspectorControls>
 

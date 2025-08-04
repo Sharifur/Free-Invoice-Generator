@@ -14,13 +14,17 @@ export default function save({ attributes }) {
         stats,
         ctaText,
         ctaUrl,
-        showIcons
+        showIcons,
+        topPadding,
+        bottomPadding
     } = attributes;
 
     const blockProps = useBlockProps.save({
         className: 'ib-benefits-section',
         style: {
-            background: `linear-gradient(135deg, ${backgroundColor} 0%, ${gradientColor} 100%)`
+            background: `linear-gradient(135deg, ${backgroundColor} 0%, ${gradientColor} 100%)`,
+            paddingTop: `${topPadding}px`,
+            paddingBottom: `${bottomPadding}px`
         }
     });
 

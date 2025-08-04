@@ -16,7 +16,8 @@ import {
     Flex,
     FlexItem,
     ToggleControl,
-    SelectControl
+    SelectControl,
+    RangeControl
 } from '@wordpress/components';
 import { Fragment, useState } from '@wordpress/element';
 
@@ -43,7 +44,9 @@ export default function Edit({ attributes, setAttributes }) {
         ctaTextColor,
         ctaButtonBackgroundColor,
         ctaButtonHoverColor,
-        ctaButtonTextColor
+        ctaButtonTextColor,
+        topPadding,
+        bottomPadding
     } = attributes;
 
     const [activeTab, setActiveTab] = useState('us');
@@ -51,7 +54,9 @@ export default function Edit({ attributes, setAttributes }) {
     const blockProps = useBlockProps({
         className: 'ib-legal-section',
         style: {
-            background: `linear-gradient(to bottom, ${backgroundColor}, ${gradientEndColor})`
+            background: `linear-gradient(to bottom, ${backgroundColor}, ${gradientEndColor})`,
+            paddingTop: `${topPadding}px`,
+            paddingBottom: `${bottomPadding}px`
         }
     });
 
@@ -287,6 +292,25 @@ export default function Edit({ attributes, setAttributes }) {
                                 label: __('Button Text Color', 'simple-invoice-generator')
                             }
                         ]}
+                    />
+                </PanelBody>
+
+                <PanelBody title={__('Spacing Settings', 'simple-invoice-generator')} initialOpen={false}>
+                    <RangeControl
+                        label={__('Top Padding (px)', 'simple-invoice-generator')}
+                        value={topPadding}
+                        onChange={(value) => setAttributes({ topPadding: value })}
+                        min={0}
+                        max={200}
+                        step={5}
+                    />
+                    <RangeControl
+                        label={__('Bottom Padding (px)', 'simple-invoice-generator')}
+                        value={bottomPadding}
+                        onChange={(value) => setAttributes({ bottomPadding: value })}
+                        min={0}
+                        max={200}
+                        step={5}
                     />
                 </PanelBody>
 
