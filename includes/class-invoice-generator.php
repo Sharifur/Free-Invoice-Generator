@@ -27,6 +27,8 @@ class Simple_Invoice_Generator {
         require_once SIG_PLUGIN_DIR . 'includes/class-shortcode.php';
         require_once SIG_PLUGIN_DIR . 'includes/class-rest-api.php';
         require_once SIG_PLUGIN_DIR . 'includes/class-enqueue.php';
+        require_once SIG_PLUGIN_DIR . 'includes/class-gutenberg-blocks.php';
+        require_once SIG_PLUGIN_DIR . 'includes/class-block-patterns.php';
         require_once SIG_PLUGIN_DIR . 'admin/class-admin-settings.php';
     }
     
@@ -38,6 +40,7 @@ class Simple_Invoice_Generator {
         $shortcode = new SIG_Shortcode();
         $rest_api = new SIG_REST_API();
         $enqueue = new SIG_Enqueue();
+        $blocks = SIG_Gutenberg_Blocks::get_instance();
         $admin = new SIG_Admin_Settings();
         
         // Register shortcode
@@ -45,6 +48,7 @@ class Simple_Invoice_Generator {
         
         // Register REST API endpoints
         add_action('rest_api_init', array($rest_api, 'register_endpoints'));
+        add_action('rest_api_init', array($blocks, 'register_rest_routes'));
         
         // Enqueue scripts and styles
         add_action('init', array($enqueue, 'register_assets'));

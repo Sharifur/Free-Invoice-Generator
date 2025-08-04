@@ -1,0 +1,483 @@
+.ib-legal-section {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+    color: #2d3748;
+    width: 100%;
+}
+
+/* Full width support */
+.ib-legal-section.alignfull {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.ib-legal-section.alignwide {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ib-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Full width container adjustments */
+.ib-legal-section.alignfull .ib-container {
+    max-width: none;
+    padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+    .ib-legal-section.alignfull .ib-container {
+        padding: 0 20px;
+    }
+}
+
+.ib-section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.ib-section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.ib-section-subtitle {
+    font-size: 1.25rem;
+    color: #64748b;
+    margin: 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.ib-legal-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+/* Essential Elements */
+.ib-essentials-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.ib-essentials-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.ib-essentials-icon {
+    font-size: 32px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.ib-essentials-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.ib-essentials-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a202c;
+    margin: 0;
+}
+
+.ib-essentials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.ib-essential-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.ib-essential-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.ib-essential-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #667eea;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.ib-essential-content {
+    flex: 1;
+}
+
+.ib-essential-name {
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.ib-essential-desc {
+    color: #64748b;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Tax Requirements */
+.ib-tax-section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+}
+
+.ib-tax-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.ib-tax-icon {
+    font-size: 32px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.ib-tax-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.ib-tax-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a202c;
+    margin: 0;
+}
+
+.ib-tax-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 32px;
+    justify-content: center;
+}
+
+.ib-tax-tab {
+    padding: 12px 20px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #64748b;
+    text-decoration: none;
+}
+
+.ib-tax-tab:hover {
+    border-color: #cbd5e1;
+    background: #f8fafc;
+}
+
+.ib-tax-tab.active {
+    background-color: #667eea;
+    border-color: #667eea;
+    color: #fff;
+    font-weight: 600;
+}
+
+.ib-tax-content {
+    display: none;
+}
+
+.ib-tax-content.active {
+    display: block;
+    background: #f8fafc;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.ib-tax-info h4 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 16px;
+}
+
+.ib-tax-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ib-tax-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+    position: relative;
+    padding-left: 24px;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.ib-tax-list li:last-child {
+    border-bottom: none;
+}
+
+.ib-tax-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: 600;
+}
+
+/* International Section */
+.ib-international-section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+}
+
+.ib-international-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+
+.ib-international-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.ib-international-card {
+    text-align: center;
+    padding: 24px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.ib-international-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.ib-country-flag {
+    font-size: 48px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.ib-country-name {
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.ib-country-requirement {
+    color: #64748b;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Checklist Section */
+.ib-checklist-section {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+}
+
+.ib-checklist-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.ib-checklist-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 8px;
+}
+
+.ib-checklist-title img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ib-checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+}
+
+.ib-checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.ib-checklist-item:hover {
+    background: #f1f5f9;
+}
+
+.ib-checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #667eea;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #667eea;
+    font-weight: 600;
+    flex-shrink: 0;
+    background: #fff;
+}
+
+.ib-checklist-text {
+    color: #4a5568;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    flex: 1;
+}
+
+/* CTA Section */
+.ib-cta-section {
+    text-align: center;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+/* Full width CTA for alignfull legal sections */
+.ib-legal-section.alignfull .ib-cta-section {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+}
+
+.ib-cta-button {
+    display: inline-block;
+    background-color: #667eea;
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.ib-cta-button:hover {
+    background-color: var(--cta-button-hover-color, #5a67d8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ib-section-title {
+        font-size: 2rem;
+    }
+    
+    .ib-section-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .ib-essentials-card,
+    .ib-tax-section,
+    .ib-international-section,
+    .ib-checklist-section {
+        padding: 24px;
+    }
+    
+    .ib-essentials-grid,
+    .ib-international-grid,
+    .ib-checklist-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ib-tax-tabs {
+        flex-direction: column;
+    }
+    
+    .ib-tax-tab {
+        text-align: center;
+    }
+    
+    .ib-essential-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .ib-essential-number {
+        align-self: center;
+    }
+}

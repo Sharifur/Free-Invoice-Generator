@@ -1,0 +1,636 @@
+/**
+ * Editor styles for Gutenberg blocks
+ * Provides styling for blocks in the WordPress editor
+ */
+
+/* Block editor container styling */
+.wp-block[data-type*="sig/"] {
+    margin-bottom: 20px;
+}
+
+/* Editor preview styling to match frontend */
+.editor-styles-wrapper .sig-section {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 16px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.editor-styles-wrapper .sig-section.has-background {
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Section headers in editor */
+.editor-styles-wrapper .sig-section-header {
+    margin: 0 0 16px 0;
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 8px;
+}
+
+/* List styling in editor */
+.editor-styles-wrapper .sig-feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0;
+}
+
+.editor-styles-wrapper .sig-feature-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.editor-styles-wrapper .sig-feature-list li:last-child {
+    border-bottom: none;
+}
+
+.editor-styles-wrapper .sig-feature-list li::before {
+    content: "✓";
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* Button styling in editor */
+.editor-styles-wrapper .sig-header-actions {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+}
+
+.editor-styles-wrapper .sig-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.editor-styles-wrapper .sig-btn-primary {
+    background: #3498db;
+    color: white;
+}
+
+.editor-styles-wrapper .sig-btn-primary:hover {
+    background: #2980b9;
+}
+
+/* Layout grid for templates in editor */
+.editor-styles-wrapper .sig-layout-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.editor-styles-wrapper .sig-layout-option {
+    background: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.editor-styles-wrapper .sig-layout-option:hover {
+    border-color: #3498db;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.15);
+}
+
+.editor-styles-wrapper .sig-layout-option.active {
+    border-color: #2c3e50;
+    background: #f8f9fa;
+}
+
+.editor-styles-wrapper .sig-layout-preview-container {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.editor-styles-wrapper .sig-layout-preview {
+    width: 40px;
+    height: 48px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    background: #ffffff;
+}
+
+.editor-styles-wrapper .sig-layout-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 2px;
+}
+
+.editor-styles-wrapper .sig-layout-description {
+    font-size: 9px;
+    color: #666;
+    line-height: 1.2;
+}
+
+/* Inspector controls styling */
+.components-panel__body .sig-feature-editor {
+    margin-bottom: 16px;
+}
+
+.sig-feature-editor label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.sig-feature-editor input[type="text"] {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.sig-feature-editor button.remove-feature {
+    background: #dc3232;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    cursor: pointer;
+    margin-top: 4px;
+}
+
+.sig-feature-editor button.add-feature {
+    background: #0073aa;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+/* Block icons and placeholders */
+.editor-styles-wrapper .sig-block-placeholder {
+    text-align: center;
+    padding: 40px 20px;
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.editor-styles-wrapper .sig-block-placeholder-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px;
+    opacity: 0.5;
+}
+
+.editor-styles-wrapper .sig-block-placeholder-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.editor-styles-wrapper .sig-block-placeholder-description {
+    font-size: 14px;
+    color: #999;
+    line-height: 1.4;
+}
+
+/* Media queries for responsive editor */
+@media (max-width: 782px) {
+    .editor-styles-wrapper .sig-layout-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 8px;
+    }
+    
+    .editor-styles-wrapper .sig-section {
+        padding: 16px;
+    }
+    
+    .editor-styles-wrapper .sig-section-header {
+        font-size: 18px;
+    }
+}
+
+/* Block variations and states */
+.editor-styles-wrapper .sig-section.is-selected {
+    border-color: #007cba;
+    box-shadow: 0 0 0 1px #007cba;
+}
+
+.editor-styles-wrapper .sig-section.has-warning {
+    border-color: #f0b849;
+    background: #fffbf0;
+}
+
+.editor-styles-wrapper .sig-section.has-error {
+    border-color: #dc3232;
+    background: #fef7f7;
+}
+
+/* Loading states */
+.editor-styles-wrapper .sig-section.is-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.editor-styles-wrapper .sig-section.is-loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: sig-spin 1s linear infinite;
+}
+
+@keyframes sig-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Block alignment */
+.editor-styles-wrapper .alignleft {
+    float: left;
+    margin-right: 20px;
+}
+
+.editor-styles-wrapper .alignright {
+    float: right;
+    margin-left: 20px;
+}
+
+.editor-styles-wrapper .aligncenter {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Full width and wide alignment */
+.editor-styles-wrapper .alignfull {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+
+.editor-styles-wrapper .alignwide {
+    width: calc(100% + 100px);
+    margin-left: -50px;
+}
+
+/* Hide block toolbar when not selected */
+.wp-block:not(.is-selected) .block-editor-block-toolbar {
+    display: none;
+}
+
+/* Custom block category styling */
+.block-editor-inserter__panel-content .block-editor-block-types-list__list-item[data-id*="sig/"] {
+    border-left: 3px solid #3498db;
+}
+
+.block-editor-inserter__panel-content .block-editor-block-types-list__list-item[data-id*="sig/"]:hover {
+    background-color: rgba(52, 152, 219, 0.05);
+}
+
+/* Callout Block Editor Styles */
+.editor-styles-wrapper .sig-callout {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: 6px;
+    border-left: 4px solid;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.editor-styles-wrapper .sig-callout-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.editor-styles-wrapper .sig-callout-icon {
+    font-size: 20px;
+    line-height: 1;
+}
+
+.editor-styles-wrapper .sig-callout-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.editor-styles-wrapper .sig-callout-content p {
+    margin: 0 0 12px 0;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.editor-styles-wrapper .sig-callout-button {
+    margin-top: 12px;
+}
+
+/* Callout editor type variations */
+.editor-styles-wrapper .sig-callout-info {
+    background: #e8f4fd;
+    border-left-color: #3498db;
+    color: #2c3e50;
+}
+
+.editor-styles-wrapper .sig-callout-info .sig-callout-title {
+    color: #2980b9;
+}
+
+.editor-styles-wrapper .sig-callout-success {
+    background: #eafaf1;
+    border-left-color: #27ae60;
+    color: #1e3a2e;
+}
+
+.editor-styles-wrapper .sig-callout-success .sig-callout-title {
+    color: #229954;
+}
+
+.editor-styles-wrapper .sig-callout-warning {
+    background: #fef9e7;
+    border-left-color: #f39c12;
+    color: #3d2914;
+}
+
+.editor-styles-wrapper .sig-callout-warning .sig-callout-title {
+    color: #d68910;
+}
+
+.editor-styles-wrapper .sig-callout-error {
+    background: #fdeaea;
+    border-left-color: #e74c3c;
+    color: #3d1a1a;
+}
+
+.editor-styles-wrapper .sig-callout-error .sig-callout-title {
+    color: #c0392b;
+}
+
+/* Client Review Block Editor Styles */
+.editor-styles-wrapper .sig-review {
+    background: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    margin: 16px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.editor-styles-wrapper .sig-review-container {
+    padding: 20px;
+}
+
+.editor-styles-wrapper .sig-review-rating {
+    margin-bottom: 12px;
+}
+
+.editor-styles-wrapper .sig-review-rating .star {
+    font-size: 16px;
+    margin-right: 2px;
+}
+
+.editor-styles-wrapper .sig-review-rating .star.filled {
+    color: #f39c12;
+}
+
+.editor-styles-wrapper .sig-review-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #2c3e50;
+    font-style: italic;
+    margin: 0 0 16px 0;
+    padding: 0;
+    border: none;
+    position: relative;
+}
+
+.editor-styles-wrapper .sig-review-text::before {
+    content: """;
+    font-size: 36px;
+    color: #3498db;
+    position: absolute;
+    top: -8px;
+    left: -16px;
+    font-family: serif;
+    opacity: 0.3;
+}
+
+.editor-styles-wrapper .sig-review-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.editor-styles-wrapper .sig-review-photo {
+    flex-shrink: 0;
+}
+
+.editor-styles-wrapper .sig-review-photo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3498db;
+}
+
+.editor-styles-wrapper .sig-review-details {
+    flex: 1;
+}
+
+.editor-styles-wrapper .sig-client-name {
+    margin: 0 0 4px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.editor-styles-wrapper .sig-client-title {
+    margin: 0 0 4px 0;
+    font-size: 12px;
+    color: #7f8c8d;
+}
+
+.editor-styles-wrapper .sig-client-company {
+    margin: 0;
+    font-size: 11px;
+    color: #95a5a6;
+    font-weight: 500;
+}
+
+/* Review editor style variations */
+.editor-styles-wrapper .sig-review-minimal {
+    background: transparent;
+    border: none;
+    border-left: 3px solid #3498db;
+    border-radius: 0;
+}
+
+.editor-styles-wrapper .sig-review-minimal .sig-review-container {
+    padding: 16px;
+}
+
+.editor-styles-wrapper .sig-review-minimal .sig-review-text::before {
+    display: none;
+}
+
+.editor-styles-wrapper .sig-review-minimal .sig-review-author {
+    border-top: none;
+    padding-top: 12px;
+}
+
+.editor-styles-wrapper .sig-review-featured {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.editor-styles-wrapper .sig-review-featured .sig-review-text {
+    color: white;
+}
+
+.editor-styles-wrapper .sig-review-featured .sig-review-text::before {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.editor-styles-wrapper .sig-review-featured .sig-client-name {
+    color: white;
+}
+
+.editor-styles-wrapper .sig-review-featured .sig-client-title {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.editor-styles-wrapper .sig-review-featured .sig-client-company {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.editor-styles-wrapper .sig-review-featured .sig-review-author {
+    border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.editor-styles-wrapper .sig-review-featured .sig-review-photo img {
+    border-color: white;
+}
+
+/* Inspector controls for new blocks */
+.components-panel__body .sig-callout-controls {
+    margin-bottom: 16px;
+}
+
+.components-panel__body .sig-review-controls {
+    margin-bottom: 16px;
+}
+
+.sig-callout-controls label,
+.sig-review-controls label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.sig-callout-controls select,
+.sig-review-controls select {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.sig-callout-controls input[type="text"],
+.sig-review-controls input[type="text"] {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.sig-callout-controls textarea,
+.sig-review-controls textarea {
+    width: 100%;
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 13px;
+    resize: vertical;
+    min-height: 60px;
+}
+
+/* Rating slider styling */
+.sig-review-controls input[type="range"] {
+    width: 100%;
+    margin: 8px 0;
+}
+
+/* Toggle control styling */
+.components-toggle-control {
+    margin-bottom: 12px;
+}
+
+/* Media queries for responsive editor */
+@media (max-width: 782px) {
+    .editor-styles-wrapper .sig-callout {
+        padding: 12px;
+    }
+    
+    .editor-styles-wrapper .sig-callout-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    
+    .editor-styles-wrapper .sig-callout-title {
+        font-size: 14px;
+    }
+    
+    .editor-styles-wrapper .sig-review-container {
+        padding: 16px;
+    }
+    
+    .editor-styles-wrapper .sig-review-author {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .editor-styles-wrapper .sig-review-photo {
+        align-self: center;
+    }
+}

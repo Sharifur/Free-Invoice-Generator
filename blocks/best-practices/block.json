@@ -1,0 +1,198 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/best-practices",
+    "version": "1.0.0",
+    "title": "Invoice Best Practices",
+    "category": "sig-blocks",
+    "icon": "lightbulb",
+    "description": "Share professional invoice best practices and common mistakes to avoid",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Invoice Like a Pro: Best Practices"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Learn the proven strategies to get paid faster and maintain professional relationships"
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "proTipsBackgroundStart": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "proTipsBackgroundEnd": {
+            "type": "string",
+            "default": "#764ba2"
+        },
+        "practiceGroups": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Timing Your Invoices",
+                    "practices": [
+                        {
+                            "icon": "📤",
+                            "title": "Send Immediately",
+                            "content": "Send invoices immediately after service completion or product delivery. The sooner you invoice, the sooner you get paid.",
+                            "useImage": false,
+                            "imageUrl": "",
+                            "imageId": null,
+                            "tips": [
+                                "Set up automated reminders to invoice right away",
+                                "Invoice while the value is fresh in client's mind"
+                            ]
+                        },
+                        {
+                            "icon": "📅",
+                            "title": "Clear Payment Terms",
+                            "content": "Set clear payment deadlines using standard terms like Net 15, Net 30, or Net 60. Be consistent across all clients.",
+                            "useImage": false,
+                            "imageUrl": "",
+                            "imageId": null,
+                            "tips": [
+                                "Net 15: Payment due in 15 days",
+                                "Net 30: Standard for most businesses",
+                                "Net 60: For larger corporate clients"
+                            ]
+                        },
+                        {
+                            "icon": "🔔",
+                            "title": "Professional Follow-ups",
+                            "content": "Follow up on overdue invoices professionally. Send friendly reminders at strategic intervals.",
+                            "useImage": false,
+                            "imageUrl": "",
+                            "imageId": null,
+                            "tips": [
+                                "1st reminder: Due date",
+                                "2nd reminder: 7 days overdue",
+                                "3rd reminder: 14 days overdue"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Professional Invoice Tips",
+                    "practices": [
+                        {
+                            "icon": "#️⃣",
+                            "title": "Consistent Numbering",
+                            "content": "Use consistent invoice numbering to track payments and maintain organized records.",
+                            "useImage": false,
+                            "imageUrl": "",
+                            "imageId": null,
+                            "tips": [
+                                "Format: INV-YYYY-001",
+                                "Include year for easy sorting",
+                                "Sequential numbers prevent duplicates"
+                            ]
+                        },
+                        {
+                            "icon": "📝",
+                            "title": "Detailed Descriptions",
+                            "content": "Include detailed descriptions to avoid disputes and ensure clarity about services or products provided.",
+                            "useImage": false,
+                            "imageUrl": "",
+                            "imageId": null,
+                            "tips": [
+                                "Specify dates of service",
+                                "Include project names or codes",
+                                "Break down complex services"
+                            ]
+                        },
+                        {
+                            "icon": "🙏",
+                            "title": "Thank Your Clients",
+                            "content": "Add a thank you message in the notes section. It's professional and helps maintain positive relationships.",
+                            "useImage": false,
+                            "imageUrl": "",
+                            "imageId": null,
+                            "tips": [
+                                "\"Thank you for your business!\"",
+                                "\"We appreciate your prompt payment\"",
+                                "Personal touch strengthens relationships"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "showMistakes": {
+            "type": "boolean",
+            "default": true
+        },
+        "mistakesTitle": {
+            "type": "string",
+            "default": "Common Invoice Mistakes to Avoid"
+        },
+        "mistakes": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Missing Client Information",
+                    "description": "Always double-check client name, address, and contact details"
+                },
+                {
+                    "title": "Vague Descriptions",
+                    "description": "Avoid generic terms like \"consulting\" or \"services\""
+                },
+                {
+                    "title": "Forgetting Taxes",
+                    "description": "Always include applicable taxes and show calculations"
+                },
+                {
+                    "title": "No Payment Methods",
+                    "description": "Clearly specify how clients can pay you"
+                },
+                {
+                    "title": "Wrong Currency",
+                    "description": "Verify currency for international clients"
+                },
+                {
+                    "title": "No Terms & Conditions",
+                    "description": "Include payment terms and late fee policies"
+                }
+            ]
+        },
+        "showProTips": {
+            "type": "boolean",
+            "default": true
+        },
+        "proTipsTitle": {
+            "type": "string",
+            "default": "💡 Pro Tip: Get Paid 2x Faster"
+        },
+        "proTipsContent": {
+            "type": "string",
+            "default": "Studies show that invoices sent within 24 hours of project completion get paid twice as fast as those sent after a week. Use our invoice generator to create and send professional invoices immediately after completing work."
+        },
+        "ctaText": {
+            "type": "string",
+            "default": "Create Your Invoice Now"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#generator"
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/best-practices.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css"
+}

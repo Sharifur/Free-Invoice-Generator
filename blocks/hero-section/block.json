@@ -1,0 +1,106 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/hero-section",
+    "version": "1.0.0",
+    "title": "Hero Section",
+    "category": "sig-blocks",
+    "icon": "cover-image",
+    "description": "A customizable hero section with trust signals and preview cards",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Free Invoice Generator - Create Professional Invoices in 60 Seconds"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "No signup required. Generate, customize, and download unlimited invoices instantly"
+        },
+        "backgroundType": {
+            "type": "string",
+            "default": "gradient"
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "gradientColor1": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "gradientColor2": {
+            "type": "string",
+            "default": "#764ba2"
+        },
+        "gradientDirection": {
+            "type": "number",
+            "default": 135
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "trustSignalColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "buttonText": {
+            "type": "string",
+            "default": "Create Your Free Invoice Now"
+        },
+        "buttonLink": {
+            "type": "string",
+            "default": "#generator"
+        },
+        "trustSignals": {
+            "type": "array",
+            "default": [
+                {
+                    "text": "100% Secure"
+                },
+                {
+                    "text": "Trusted by 50,000+ businesses"
+                },
+                {
+                    "text": "No time limits"
+                }
+            ]
+        },
+        "previewCards": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Standard Template",
+                    "headerColor": "#f5f5f5",
+                    "imageUrl": "",
+                    "imageId": null
+                },
+                {
+                    "label": "Modern Template",
+                    "headerColor": "#667eea",
+                    "imageUrl": "",
+                    "imageId": null
+                },
+                {
+                    "label": "Minimal Template",
+                    "headerColor": "#333333",
+                    "imageUrl": "",
+                    "imageId": null
+                }
+            ]
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/hero-section.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css"
+}

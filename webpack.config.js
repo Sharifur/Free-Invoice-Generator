@@ -1,10 +1,20 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    app: './src/index.js',
+    blocks: './blocks/blocks.js',
+    'hero-section': './blocks/hero-section/src/index.js',
+    'steps-guide': './blocks/steps-guide/src/index.js',
+    'invoice-components': './blocks/invoice-components/src/index.js',
+    'benefits-section': './blocks/benefits-section/src/index.js',
+    'best-practices': './blocks/best-practices/src/index.js',
+    'legal-compliance': './blocks/legal-compliance/src/index.js',
+    'faq-section': './blocks/faq-section/src/index.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'app.js',
+    filename: '[name].js',
   },
   module: {
     rules: [
@@ -32,6 +42,9 @@ module.exports = {
     'react-dom': 'ReactDOM',
     '@wordpress/element': 'wp.element',
     '@wordpress/components': 'wp.components',
-    '@wordpress/i18n': 'wp.i18n'
+    '@wordpress/i18n': 'wp.i18n',
+    '@wordpress/blocks': 'wp.blocks',
+    '@wordpress/block-editor': 'wp.blockEditor',
+    '@wordpress/editor': 'wp.editor'
   }
 };

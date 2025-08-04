@@ -1,0 +1,175 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/invoice-components",
+    "version": "1.0.0",
+    "title": "Invoice Components Guide",
+    "category": "sig-blocks",
+    "icon": "analytics",
+    "description": "An interactive guide showing essential invoice components with visual mockup",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "What Should Your Invoice Include?"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Learn about all the essential components of a professional invoice to ensure you get paid on time"
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "mockupData": {
+            "type": "object",
+            "default": {
+                "companyName": "Acme Design Studio",
+                "companyAddress": "123 Business St, City, ST 12345",
+                "companyPhone": "(555) 123-4567",
+                "companyEmail": "hello@acmedesign.com",
+                "invoiceNumber": "INV-2024-001",
+                "invoiceDate": "Dec 20, 2024",
+                "clientName": "TechCorp Industries",
+                "clientAddress": "456 Client Ave, Metro City, CT 67890",
+                "dueDate": "Jan 20, 2025",
+                "items": [
+                    {
+                        "description": "Website Design",
+                        "quantity": "1",
+                        "rate": "$750.00",
+                        "amount": "$750.00"
+                    },
+                    {
+                        "description": "Logo Design",
+                        "quantity": "1",
+                        "rate": "$350.00",
+                        "amount": "$350.00"
+                    },
+                    {
+                        "description": "Brand Guidelines",
+                        "quantity": "1",
+                        "rate": "$200.00",
+                        "amount": "$200.00"
+                    }
+                ],
+                "subtotal": "$1,300.00",
+                "discount": "$50.00",
+                "discountPercent": "3.85%",
+                "shipping": "$0.00",
+                "tax": "$112.50",
+                "taxPercent": "9%",
+                "totalAmount": "$1,362.50",
+                "notes": "Thank you for your business!",
+                "paymentTerms": "Payment is due within 30 days. Late payments subject to 1.5% monthly interest.",
+                "showLogo": true,
+                "logoUrl": "",
+                "logoId": null
+            }
+        },
+        "components": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Business Information",
+                    "description": "Your company details that establish credibility and provide contact information",
+                    "details": [
+                        "Company name and logo",
+                        "Business address",
+                        "Phone number and email",
+                        "Tax ID or business registration number",
+                        "Website URL (optional)"
+                    ],
+                    "isActive": true
+                },
+                {
+                    "title": "Client Details",
+                    "description": "Customer information for proper billing and record-keeping",
+                    "details": [
+                        "Customer or company name",
+                        "Billing address",
+                        "Contact person name",
+                        "Email and phone number",
+                        "Customer tax ID (if applicable)"
+                    ],
+                    "isActive": false
+                },
+                {
+                    "title": "Invoice Identifiers",
+                    "description": "Unique identifiers for tracking and reference",
+                    "details": [
+                        "Unique invoice number",
+                        "Invoice issue date",
+                        "Purchase order number (if applicable)",
+                        "Reference number for your records"
+                    ],
+                    "isActive": false
+                },
+                {
+                    "title": "Payment Terms",
+                    "description": "Clear payment expectations and methods",
+                    "details": [
+                        "Payment due date",
+                        "Accepted payment methods",
+                        "Late payment fees or penalties",
+                        "Early payment discounts",
+                        "Bank account details (if applicable)"
+                    ],
+                    "isActive": false
+                },
+                {
+                    "title": "Itemized Services/Products",
+                    "description": "Detailed breakdown of what you're billing for",
+                    "details": [
+                        "Item or service description",
+                        "Quantity or hours",
+                        "Rate per unit or hour",
+                        "Line item totals",
+                        "Product codes or SKUs"
+                    ],
+                    "isActive": false
+                },
+                {
+                    "title": "Financial Summary",
+                    "description": "Clear breakdown of all charges and the final amount due",
+                    "details": [
+                        "Subtotal before taxes",
+                        "Tax rate and amount",
+                        "Discounts applied",
+                        "Shipping or handling fees",
+                        "Total amount due"
+                    ],
+                    "isActive": false
+                },
+                {
+                    "title": "Additional Information",
+                    "description": "Important notes and legal terms",
+                    "details": [
+                        "Special notes or instructions",
+                        "Terms and conditions",
+                        "Thank you message",
+                        "Return/refund policy",
+                        "Warranty information"
+                    ],
+                    "isActive": false,
+                    "useImage": false,
+                    "imageUrl": "",
+                    "imageId": null
+                }
+            ]
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/invoice-components.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css",
+    "viewScript": "file:./src/view.js"
+}

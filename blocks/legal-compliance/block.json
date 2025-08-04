@@ -1,0 +1,255 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/legal-compliance",
+    "version": "1.0.0",
+    "title": "Legal Compliance",
+    "category": "sig-blocks",
+    "icon": "shield",
+    "description": "Showcase legal compliance requirements for invoicing across different regions",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Creating Legally Compliant Invoices"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Ensure your invoices meet legal requirements and tax regulations worldwide"
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "gradientEndColor": {
+            "type": "string",
+            "default": "#f8f9fa"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "essentialElements": {
+            "type": "array",
+            "default": [
+                {
+                    "number": "1",
+                    "name": "Unique Invoice Number",
+                    "description": "Sequential numbering system for tracking and audit purposes",
+                    "useImage": false,
+                    "imageId": 0,
+                    "imageUrl": ""
+                },
+                {
+                    "number": "2",
+                    "name": "Issue Date",
+                    "description": "The date when the invoice was created and sent",
+                    "useImage": false,
+                    "imageId": 0,
+                    "imageUrl": ""
+                },
+                {
+                    "number": "3",
+                    "name": "Business Information",
+                    "description": "Full legal name, address, and tax identification number",
+                    "useImage": false,
+                    "imageId": 0,
+                    "imageUrl": ""
+                },
+                {
+                    "number": "4",
+                    "name": "Customer Details",
+                    "description": "Client's legal name, billing address, and tax ID if applicable",
+                    "useImage": false,
+                    "imageId": 0,
+                    "imageUrl": ""
+                },
+                {
+                    "number": "5",
+                    "name": "Description of Goods/Services",
+                    "description": "Clear, detailed description of what was provided",
+                    "useImage": false,
+                    "imageId": 0,
+                    "imageUrl": ""
+                },
+                {
+                    "number": "6",
+                    "name": "Total Amount Due",
+                    "description": "Clear statement of the total amount in numbers and words",
+                    "useImage": false,
+                    "imageId": 0,
+                    "imageUrl": ""
+                }
+            ]
+        },
+        "essentialsSectionTitle": {
+            "type": "string",
+            "default": "Essential Elements for Legal Validity"
+        },
+        "taxRegions": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "us",
+                    "name": "United States",
+                    "title": "United States Requirements",
+                    "requirements": [
+                        "Include your EIN (Employer Identification Number) or SSN",
+                        "State sales tax varies by state - check local requirements",
+                        "W-9 forms may be required for B2B transactions over $600",
+                        "1099 forms needed for annual payments over $600"
+                    ]
+                },
+                {
+                    "id": "eu",
+                    "name": "European Union",
+                    "title": "European Union VAT Requirements",
+                    "requirements": [
+                        "VAT number must be displayed on all invoices",
+                        "VAT rates vary by country (17-27%)",
+                        "Reverse charge mechanism for B2B cross-border sales",
+                        "Digital services have special VAT rules (MOSS)"
+                    ]
+                },
+                {
+                    "id": "uk",
+                    "name": "United Kingdom",
+                    "title": "United Kingdom Requirements",
+                    "requirements": [
+                        "VAT registration number if VAT registered",
+                        "Standard VAT rate: 20% (reduced rates available)",
+                        "Invoice must state \"VAT Invoice\" if charging VAT",
+                        "Making Tax Digital (MTD) compliance required"
+                    ]
+                },
+                {
+                    "id": "canada",
+                    "name": "Canada",
+                    "title": "Canadian Tax Requirements",
+                    "requirements": [
+                        "GST/HST number required for businesses over $30,000",
+                        "GST rate: 5% federal, PST varies by province",
+                        "Quebec has additional QST requirements",
+                        "Separate line items for each tax type"
+                    ]
+                },
+                {
+                    "id": "australia",
+                    "name": "Australia",
+                    "title": "Australian Requirements",
+                    "requirements": [
+                        "ABN (Australian Business Number) required",
+                        "GST: 10% for most goods and services",
+                        "Must state \"Tax Invoice\" for GST purposes",
+                        "GST-free items must be clearly marked"
+                    ]
+                }
+            ]
+        },
+        "taxSectionTitle": {
+            "type": "string",
+            "default": "Tax Requirements by Region"
+        },
+        "internationalCards": {
+            "type": "array",
+            "default": [
+                {
+                    "flag": "🇺🇸",
+                    "name": "B2B International",
+                    "requirement": "Often zero-rated or reverse charge applies",
+                    "useImage": false,
+                    "imageId": 0,
+                    "imageUrl": ""
+                },
+                {
+                    "flag": "🇪🇺",
+                    "name": "EU Cross-Border",
+                    "requirement": "VAT reverse charge for B2B transactions",
+                    "useImage": false,
+                    "imageId": 0,
+                    "imageUrl": ""
+                },
+                {
+                    "flag": "🌐",
+                    "name": "Digital Services",
+                    "requirement": "Special rules apply - check destination country",
+                    "useImage": false,
+                    "imageId": 0,
+                    "imageUrl": ""
+                },
+                {
+                    "flag": "📦",
+                    "name": "Physical Goods",
+                    "requirement": "Export invoices often VAT-exempt",
+                    "useImage": false,
+                    "imageId": 0,
+                    "imageUrl": ""
+                }
+            ]
+        },
+        "internationalSectionTitle": {
+            "type": "string",
+            "default": "International Invoicing Considerations"
+        },
+        "checklist": {
+            "type": "array",
+            "default": [
+                "Keep invoice copies for 5-7 years (varies by country)",
+                "Maintain sequential invoice numbering system",
+                "Store digital backups in secure cloud storage",
+                "Track payment status and dates received",
+                "Document any invoice amendments or credits",
+                "Organize by tax year for easy retrieval"
+            ]
+        },
+        "checklistSectionTitle": {
+            "type": "string",
+            "default": "Record-Keeping Recommendations"
+        },
+        "showCTA": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaText": {
+            "type": "string",
+            "default": "Create Compliant Invoices Now"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#generator"
+        },
+        "ctaDescription": {
+            "type": "string",
+            "default": "Our invoice generator automatically includes all legally required fields"
+        },
+        "ctaSectionBackgroundColor": {
+            "type": "string",
+            "default": "#f8fafc"
+        },
+        "ctaTextColor": {
+            "type": "string",
+            "default": "#666666"
+        },
+        "ctaButtonBackgroundColor": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "ctaButtonHoverColor": {
+            "type": "string",
+            "default": "#5a67d8"
+        },
+        "ctaButtonTextColor": {
+            "type": "string",
+            "default": "#ffffff"
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/legal-compliance.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css",
+    "viewScript": "file:./src/view.js"
+}

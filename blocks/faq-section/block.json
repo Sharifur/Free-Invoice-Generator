@@ -1,0 +1,153 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/faq-section",
+    "version": "1.0.0",
+    "title": "FAQ Section",
+    "category": "sig-blocks",
+    "icon": "editor-help",
+    "description": "Display frequently asked questions with categories and search engine optimized schema markup",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true,
+        "anchor": true
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        },
+        "title": {
+            "type": "string",
+            "default": "Frequently Asked Questions"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Everything you need to know about our free invoice generator"
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "categories": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "general",
+                    "name": "General Questions",
+                    "isActive": true
+                },
+                {
+                    "id": "technical",
+                    "name": "Technical Questions",
+                    "isActive": false
+                }
+            ]
+        },
+        "faqItems": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "faq-1",
+                    "category": "general",
+                    "question": "What is an invoice generator?",
+                    "answer": "An invoice generator is an online tool that helps you create professional invoices quickly and easily. Our free invoice generator allows you to create customized invoices with your business information, add multiple line items with automatic calculations, choose from professional templates, download invoices as PDF files, and send invoices directly to clients."
+                },
+                {
+                    "id": "faq-2",
+                    "category": "general",
+                    "question": "How does the free invoice generator work?",
+                    "answer": "Our invoice generator works in three simple steps: Step 1: Choose a template and add your business logo, Step 2: Fill in your business and client information, Step 3: Add items/services and download your invoice. Everything happens in your browser - no data is stored on our servers."
+                },
+                {
+                    "id": "faq-3",
+                    "category": "general",
+                    "question": "Do I need to create an account?",
+                    "answer": "No! That's the beauty of our service. You can start creating invoices immediately without any registration, sign-up, or login. Just visit our page and start invoicing."
+                },
+                {
+                    "id": "faq-4",
+                    "category": "technical",
+                    "question": "What file formats are available for download?",
+                    "answer": "Currently, we offer high-quality PDF downloads which are perfect for emailing to clients, printing physical copies, storing in your records, and uploading to accounting software. PDF is the industry standard for invoices as it preserves formatting across all devices."
+                },
+                {
+                    "id": "faq-5",
+                    "category": "technical",
+                    "question": "Is the invoice generator mobile-friendly?",
+                    "answer": "Yes! Our invoice generator is fully responsive and works perfectly on desktop computers, tablets (iPad, Android tablets), and smartphones (iPhone, Android). Create professional invoices wherever you are, whenever you need them."
+                },
+                {
+                    "id": "faq-6",
+                    "category": "business",
+                    "question": "Are the invoices legally compliant?",
+                    "answer": "Yes, our invoices include all legally required fields: unique invoice numbers, business information and tax IDs, client details, itemized services/products, tax calculations, and payment terms and due dates. However, tax laws vary by region, so we recommend checking local requirements."
+                },
+                {
+                    "id": "faq-7",
+                    "category": "security",
+                    "question": "Is my business information secure?",
+                    "answer": "Absolutely! Your security is our priority: all data processing happens in your browser, we don't store any information on our servers, no databases = no data breaches, and SSL encryption for all connections."
+                }
+            ]
+        },
+        "showCTA": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaTitle": {
+            "type": "string",
+            "default": "Still Have Questions?"
+        },
+        "ctaText": {
+            "type": "string",
+            "default": "Don't see your question here? Start creating your invoice and see how easy it is!"
+        },
+        "ctaButtonText": {
+            "type": "string",
+            "default": "Create Your Free Invoice"
+        },
+        "ctaButtonUrl": {
+            "type": "string",
+            "default": "#generator"
+        },
+        "enableSchemaMarkup": {
+            "type": "boolean",
+            "default": true
+        },
+        "ctaBackgroundStartColor": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "ctaBackgroundEndColor": {
+            "type": "string",
+            "default": "#764ba2"
+        },
+        "ctaTextColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "ctaButtonBackgroundColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "ctaButtonTextColor": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "ctaButtonHoverColor": {
+            "type": "string",
+            "default": "#f8f9fa"
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/faq-section.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css",
+    "viewScript": "file:./src/view.js"
+}

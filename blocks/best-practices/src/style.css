@@ -1,0 +1,243 @@
+.ib-practices-section {
+    padding: 80px 20px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.wp-block-sig-best-practices {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.ib-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ib-section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.ib-section-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.ib-section-subtitle {
+    font-size: 20px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.ib-practices-container {
+    display: grid;
+    gap: 60px;
+}
+
+.ib-practice-group {
+    background: #f8f9fa;
+    border-radius: 16px;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ib-practice-group::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+.ib-group-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ib-group-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+}
+
+.ib-practices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.ib-practice-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.ib-practice-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.ib-practice-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.ib-practice-icon {
+    color: #667eea;
+    font-size: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ib-practice-image {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.ib-practice-content {
+    color: #666;
+    line-height: 1.6;
+}
+
+.ib-practice-tips {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.ib-tip-item {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.ib-tip-icon {
+    color: #4CAF50;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.ib-mistakes-section {
+    background: #fff3cd;
+    border: 2px solid #ffc107;
+    border-radius: 16px;
+    padding: 40px;
+    margin-top: 60px;
+}
+
+.ib-mistakes-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ib-mistakes-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+}
+
+.ib-mistakes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.ib-mistake-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+}
+
+.ib-mistake-text {
+    color: #666;
+    font-size: 15px;
+}
+
+.ib-pro-tips {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 50px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.ib-pro-tips-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.ib-pro-tips-content {
+    font-size: 18px;
+    opacity: 0.95;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.ib-download-guide-btn {
+    background: #fff;
+    color: #667eea;
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.ib-download-guide-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: #667eea;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .ib-section-title {
+        font-size: 32px;
+    }
+    
+    .ib-practice-group {
+        padding: 30px;
+    }
+    
+    .ib-practices-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ib-pro-tips {
+        padding: 30px;
+    }
+
+    .ib-practices-section {
+        padding: 60px 20px;
+    }
+}

@@ -1,0 +1,107 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/steps-guide",
+    "version": "1.0.0",
+    "title": "Steps Guide",
+    "category": "sig-blocks",
+    "icon": "list-view",
+    "description": "A step-by-step guide section with repeatable steps",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "How to Create Your Invoice in 3 Simple Steps"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Generate professional invoices in less than 60 seconds with our intuitive invoice builder"
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#333333"
+        },
+        "subtitleColor": {
+            "type": "string",
+            "default": "#666666"
+        },
+        "stepNumberColor": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "stepCardBackground": {
+            "type": "string",
+            "default": "#f8f9fa"
+        },
+        "steps": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Choose Your Template",
+                    "description": "Start by selecting the perfect invoice template that matches your brand and business needs.",
+                    "features": [
+                        "Select from Standard, Modern, or Minimal invoice layouts",
+                        "Pick your color theme to match your brand",
+                        "Upload your business logo (optional)",
+                        "Preview templates before selection"
+                    ],
+                    "imageUrl": "",
+                    "imageId": null,
+                    "showVisual": true
+                },
+                {
+                    "title": "Fill in Invoice Details",
+                    "description": "Enter all necessary information with our user-friendly form that auto-calculates totals.",
+                    "features": [
+                        "Add your business information",
+                        "Enter client details",
+                        "Add line items with automatic calculations",
+                        "Set payment terms and due dates",
+                        "Include taxes and discounts"
+                    ],
+                    "imageUrl": "",
+                    "imageId": null,
+                    "showVisual": true
+                },
+                {
+                    "title": "Download & Send",
+                    "description": "Get your professional invoice instantly in your preferred format.",
+                    "features": [
+                        "Preview your professional invoice",
+                        "Download as PDF or print directly",
+                        "Save online for future access (optional)",
+                        "Email directly to clients",
+                        "Create unlimited invoices"
+                    ],
+                    "imageUrl": "",
+                    "imageId": null,
+                    "showVisual": true
+                }
+            ]
+        },
+        "ctaText": {
+            "type": "string",
+            "default": "Start Creating Your Invoice"
+        },
+        "ctaLink": {
+            "type": "string",
+            "default": "#generator"
+        },
+        "showCta": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/steps-guide.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css"
+}

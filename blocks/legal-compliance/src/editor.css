@@ -1,0 +1,196 @@
+.wp-block-sig-legal-compliance {
+    padding: 40px 20px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.wp-block-sig-legal-compliance[data-align="full"] {
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
+.wp-block-sig-legal-compliance[data-align="full"] .ib-legal-section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.ib-legal-section .ib-section-title,
+.ib-legal-section .ib-section-subtitle,
+.ib-legal-section .ib-essential-name,
+.ib-legal-section .ib-essential-desc,
+.ib-legal-section .ib-country-name,
+.ib-legal-section .ib-country-requirement,
+.ib-legal-section .ib-checklist-text {
+    cursor: text;
+}
+
+.block-editor-block-list__layout .wp-block-sig-legal-compliance {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+}
+
+.editor-styles-wrapper .wp-block-sig-legal-compliance {
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
+.ib-essential-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.ib-card-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.ib-essential-item,
+.ib-international-card,
+.ib-checklist-item {
+    position: relative;
+}
+
+.ib-essential-number input {
+    background: transparent !important;
+    border: none !important;
+    color: #fff !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.ib-essential-number input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.ib-country-flag input {
+    font-size: 48px !important;
+    text-align: center !important;
+    border: none !important;
+    background: transparent !important;
+    width: 100% !important;
+    margin-bottom: 15px !important;
+    padding: 0 !important;
+}
+
+.ib-country-flag input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.ib-tab-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ib-tax-tab {
+    cursor: pointer;
+    padding: 12px 20px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    background: #fff;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #64748b;
+    flex: 1;
+    text-align: center;
+}
+
+.ib-tax-tab.active {
+    border-color: transparent;
+    color: #fff;
+    font-weight: 600;
+}
+
+.ib-tax-tab:hover {
+    border-color: #cbd5e1;
+}
+
+.ib-requirement-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px;
+    background: #f8fafc;
+    border-radius: 6px;
+}
+
+.ib-checklist-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.ib-checklist-text input {
+    background: transparent !important;
+    border: none !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    width: 100% !important;
+}
+
+.ib-checklist-text input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.ib-cta-button {
+    pointer-events: none;
+    text-decoration: none;
+}
+
+/* Section Icon Image Support */
+.ib-essentials-icon img,
+.ib-tax-icon img,
+.ib-international-icon img {
+    width: 60px !important;
+    height: 60px !important;
+    object-fit: cover !important;
+    border-radius: 12px !important;
+}
+
+.ib-checklist-title img {
+    width: 24px !important;
+    height: 24px !important;
+    object-fit: cover !important;
+    border-radius: 4px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    margin-right: 8px !important;
+}
+
+/* Image upload controls in inspector */
+.ib-section-icon-upload {
+    margin-bottom: 20px;
+}
+
+.ib-section-icon-upload img {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.ib-section-icon-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}

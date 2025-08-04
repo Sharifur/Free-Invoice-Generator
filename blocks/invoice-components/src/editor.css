@@ -1,0 +1,75 @@
+.wp-block-sig-invoice-components {
+    padding: 40px 20px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.ib-components-section .ib-section-title,
+.ib-components-section .ib-section-subtitle,
+.ib-components-section .ib-component-title,
+.ib-components-section .ib-component-description {
+    cursor: text;
+}
+
+.block-editor-block-list__layout .wp-block-sig-invoice-components {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+}
+
+.editor-styles-wrapper .wp-block-sig-invoice-components {
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
+.ib-component-item-wrapper {
+    position: relative;
+}
+
+.ib-component-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.ib-component-icon-input {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.ib-component-icon-input input {
+    font-size: 24px;
+    text-align: center;
+    padding: 8px;
+}
+
+.ib-component-details {
+    display: block !important;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.ib-component-details strong {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.ib-component-image-upload img {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.ib-component-icon-section .components-toggle-control {
+    margin-bottom: 15px;
+}
+
+.ib-component-icon-section .components-base-control__label {
+    font-weight: 500;
+    margin-bottom: 8px;
+}

@@ -1,0 +1,155 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/benefits-section",
+    "version": "1.0.0",
+    "title": "Benefits Section",
+    "category": "sig-blocks",
+    "icon": "awards",
+    "description": "Showcase the benefits and advantages of your free invoice generator",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Why Choose Taskip Invoice Generator?"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Everything you need to create professional invoices, without the complexity or cost"
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#f5f7fa"
+        },
+        "gradientColor": {
+            "type": "string",
+            "default": "#c3cfe2"
+        },
+        "accentColor": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "benefits": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "💸",
+                    "title": "100% Free Forever",
+                    "description": "No hidden fees, no credit card required, no premium plans. Create unlimited professional invoices without spending a penny.",
+                    "useImage": false,
+                    "imageUrl": "",
+                    "imageId": null
+                },
+                {
+                    "icon": "🚀",
+                    "title": "No Registration",
+                    "description": "Start creating invoices immediately. No sign-up forms, no email verification, no passwords to remember.",
+                    "useImage": false,
+                    "imageUrl": "",
+                    "imageId": null
+                },
+                {
+                    "icon": "♾️",
+                    "title": "Unlimited Invoices",
+                    "description": "Generate as many invoices as you need. No daily limits, no monthly quotas, no restrictions.",
+                    "useImage": false,
+                    "imageUrl": "",
+                    "imageId": null
+                },
+                {
+                    "icon": "🎨",
+                    "title": "Professional Designs",
+                    "description": "Impress clients with polished, professional invoice templates that make your business look established.",
+                    "useImage": false,
+                    "imageUrl": "",
+                    "imageId": null
+                },
+                {
+                    "icon": "⚡",
+                    "title": "Instant PDF Download",
+                    "description": "Get your invoice in high-quality PDF format within seconds. Ready to send or print immediately.",
+                    "useImage": false,
+                    "imageUrl": "",
+                    "imageId": null
+                },
+                {
+                    "icon": "📱",
+                    "title": "Mobile Optimized",
+                    "description": "Create invoices on any device - desktop, tablet, or smartphone. Perfect for invoicing on the go.",
+                    "useImage": false,
+                    "imageUrl": "",
+                    "imageId": null
+                },
+                {
+                    "icon": "🔒",
+                    "title": "Secure & Private",
+                    "description": "Your data is never stored or shared. Everything happens in your browser for maximum privacy.",
+                    "useImage": false,
+                    "imageUrl": "",
+                    "imageId": null
+                },
+                {
+                    "icon": "🌍",
+                    "title": "Multi-Currency Support",
+                    "description": "Invoice in any currency. Perfect for international businesses and global freelancers.",
+                    "useImage": false,
+                    "imageUrl": "",
+                    "imageId": null
+                }
+            ]
+        },
+        "showHighlight": {
+            "type": "boolean",
+            "default": true
+        },
+        "highlightTitle": {
+            "type": "string",
+            "default": "Join Thousands of Happy Users"
+        },
+        "highlightSubtitle": {
+            "type": "string",
+            "default": "Businesses worldwide trust our invoice generator for their billing needs"
+        },
+        "stats": {
+            "type": "array",
+            "default": [
+                {
+                    "number": "50K+",
+                    "label": "Active Users"
+                },
+                {
+                    "number": "1M+",
+                    "label": "Invoices Created"
+                },
+                {
+                    "number": "4.9/5",
+                    "label": "User Rating"
+                },
+                {
+                    "number": "60s",
+                    "label": "Average Creation Time"
+                }
+            ]
+        },
+        "ctaText": {
+            "type": "string",
+            "default": "Start Creating Free Invoices Now"
+        },
+        "ctaUrl": {
+            "type": "string",
+            "default": "#generator"
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/benefits-section.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css"
+}
