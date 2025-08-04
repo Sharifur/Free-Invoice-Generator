@@ -44,7 +44,9 @@ export default function Edit({ attributes, setAttributes }) {
         buttonText,
         buttonLink,
         trustSignals,
-        previewCards
+        previewCards,
+        topPadding,
+        bottomPadding
     } = attributes;
 
     const getBackgroundStyle = () => {
@@ -57,7 +59,9 @@ export default function Edit({ attributes, setAttributes }) {
     const blockProps = useBlockProps({
         className: 'ib-hero-section',
         style: {
-            background: getBackgroundStyle()
+            background: getBackgroundStyle(),
+            paddingTop: `${topPadding}px`,
+            paddingBottom: `${bottomPadding}px`
         }
     });
 
@@ -200,6 +204,25 @@ export default function Edit({ attributes, setAttributes }) {
                     <Button isPrimary onClick={addTrustSignal}>
                         {__('Add Trust Signal', 'simple-invoice-generator')}
                     </Button>
+                </PanelBody>
+
+                <PanelBody title={__('Spacing Settings', 'simple-invoice-generator')} initialOpen={false}>
+                    <RangeControl
+                        label={__('Top Padding (px)', 'simple-invoice-generator')}
+                        value={topPadding}
+                        onChange={(value) => setAttributes({ topPadding: value })}
+                        min={0}
+                        max={200}
+                        step={5}
+                    />
+                    <RangeControl
+                        label={__('Bottom Padding (px)', 'simple-invoice-generator')}
+                        value={bottomPadding}
+                        onChange={(value) => setAttributes({ bottomPadding: value })}
+                        min={0}
+                        max={200}
+                        step={5}
+                    />
                 </PanelBody>
 
                 <PanelBody title={__('Preview Cards', 'simple-invoice-generator')} initialOpen={false}>

@@ -23,7 +23,9 @@ export default function save({ attributes }) {
         buttonText,
         buttonLink,
         trustSignals,
-        previewCards
+        previewCards,
+        topPadding,
+        bottomPadding
     } = attributes;
 
     const getBackgroundStyle = () => {
@@ -36,7 +38,9 @@ export default function save({ attributes }) {
     const blockProps = useBlockProps.save({
         className: 'ib-hero-section',
         style: {
-            background: getBackgroundStyle()
+            background: getBackgroundStyle(),
+            paddingTop: `${topPadding}px`,
+            paddingBottom: `${bottomPadding}px`
         }
     });
 
