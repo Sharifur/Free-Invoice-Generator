@@ -49,8 +49,10 @@ class SIG_Shortcode {
         // Localize script data
         wp_localize_script('sig-invoice-app', 'sigConfig', $config);
         
-        // Return container div
-        return '<div id="' . esc_attr($container_id) . '" class="sig-invoice-generator-container"></div>';
+        // Return container div with both unique ID and fixed ID for anchor linking
+        return '<div id="invoice_generator" class="sig-invoice-generator-anchor">' .
+               '<div id="' . esc_attr($container_id) . '" class="sig-invoice-generator-container"></div>' .
+               '</div>';
     }
     
     /**
