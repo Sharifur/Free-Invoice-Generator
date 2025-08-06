@@ -116,9 +116,10 @@ export default function save({ attributes }) {
                                             </div>
                                             <div className="ib-faq-answer" itemScope itemType="https://schema.org/Answer">
                                                 <div itemProp="text">
-                                                    {faq.answer.split('\n').map((paragraph, pIndex) => (
-                                                        <p key={pIndex}>{paragraph}</p>
-                                                    ))}
+                                                    <RichText.Content
+                                                        tagName="div"
+                                                        value={faq.answer}
+                                                    />
                                                 </div>
                                             </div>
                                         </div>

@@ -154,6 +154,18 @@
         "bottomPadding": {
             "type": "number",
             "default": 80
+        },
+        "ctaButtonBackgroundColor": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "ctaButtonTextColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "ctaButtonHoverColor": {
+            "type": "string",
+            "default": "#5a67d8"
         }
     },
     "textdomain": "simple-invoice-generator",

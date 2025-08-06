@@ -16,7 +16,10 @@ export default function save({ attributes }) {
         ctaUrl,
         showIcons,
         topPadding,
-        bottomPadding
+        bottomPadding,
+        ctaButtonBackgroundColor,
+        ctaButtonTextColor,
+        ctaButtonHoverColor
     } = attributes;
 
     const blockProps = useBlockProps.save({
@@ -114,7 +117,11 @@ export default function save({ attributes }) {
                             <a 
                                 href={ctaUrl} 
                                 className="ib-cta-button"
-                                style={{ background: `linear-gradient(135deg, ${accentColor} 0%, #764ba2 100%)` }}
+                                style={{ 
+                                    backgroundColor: ctaButtonBackgroundColor,
+                                    color: ctaButtonTextColor,
+                                    '--cta-button-hover-color': ctaButtonHoverColor
+                                }}
                             >
                                 {ctaText}
                             </a>

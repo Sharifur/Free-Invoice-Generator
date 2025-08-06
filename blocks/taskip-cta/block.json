@@ -1,0 +1,162 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/taskip-cta",
+    "version": "1.0.0",
+    "title": "Taskip CTA",
+    "category": "sig-blocks",
+    "icon": "megaphone",
+    "description": "Showcase Taskip's advanced invoice features with payment gateways, scheduling, templates, and more",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "align": {
+            "type": "string",
+            "default": "full"
+        },
+        "title": {
+            "type": "string",
+            "default": "Upgrade to Taskip Pro"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "Take your invoicing to the next level with advanced features"
+        },
+        "description": {
+            "type": "string",
+            "default": "Stop chasing payments and start getting paid faster with Taskip's professional invoice management system."
+        },
+        "ctaButtonText": {
+            "type": "string",
+            "default": "Start Free Trial"
+        },
+        "ctaButtonUrl": {
+            "type": "string",
+            "default": "https://taskip.com/signup"
+        },
+        "secondaryButtonText": {
+            "type": "string",
+            "default": "Learn More"
+        },
+        "secondaryButtonUrl": {
+            "type": "string",
+            "default": "https://taskip.com/features"
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#f8faff"
+        },
+        "gradientStartColor": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "gradientEndColor": {
+            "type": "string",
+            "default": "#764ba2"
+        },
+        "titleColor": {
+            "type": "string",
+            "default": "#1a202c"
+        },
+        "textColor": {
+            "type": "string",
+            "default": "#4a5568"
+        },
+        "ctaButtonBackgroundColor": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "ctaButtonTextColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "ctaButtonHoverColor": {
+            "type": "string",
+            "default": "#5a67d8"
+        },
+        "secondaryButtonTextColor": {
+            "type": "string",
+            "default": "#667eea"
+        },
+        "features": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "payment-gateways",
+                    "icon": "💳",
+                    "title": "Multiple Payment Gateways",
+                    "description": "Accept payments via PayPal, Stripe, Square, and 15+ other payment methods"
+                },
+                {
+                    "id": "recurring-invoices",
+                    "icon": "🔄",
+                    "title": "Recurring Invoices",
+                    "description": "Set up automatic recurring invoices for subscription-based services"
+                },
+                {
+                    "id": "email-templates",
+                    "icon": "📧",
+                    "title": "Professional Email Templates",
+                    "description": "Send branded invoice emails with customizable templates and reminders"
+                },
+                {
+                    "id": "scheduling",
+                    "icon": "📅",
+                    "title": "Invoice Scheduling",
+                    "description": "Schedule invoices to be sent automatically on specific dates"
+                },
+                {
+                    "id": "tracking",
+                    "icon": "📊",
+                    "title": "Payment Tracking",
+                    "description": "Track payment status, overdue invoices, and generate financial reports"
+                },
+                {
+                    "id": "multi-currency",
+                    "icon": "🌍",
+                    "title": "Multi-Currency Support",
+                    "description": "Invoice in 150+ currencies with automatic exchange rate updates"
+                }
+            ]
+        },
+        "showFeatures": {
+            "type": "boolean",
+            "default": true
+        },
+        "showTestimonial": {
+            "type": "boolean",
+            "default": true
+        },
+        "testimonialText": {
+            "type": "string",
+            "default": "Taskip helped us reduce payment delays by 60% and simplified our entire billing process."
+        },
+        "testimonialAuthor": {
+            "type": "string",
+            "default": "Sarah Johnson"
+        },
+        "testimonialRole": {
+            "type": "string",
+            "default": "Business Owner, Digital Agency"
+        },
+        "testimonialAvatar": {
+            "type": "string",
+            "default": ""
+        },
+        "topPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "bottomPadding": {
+            "type": "number",
+            "default": 80
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/taskip-cta.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css"
+}

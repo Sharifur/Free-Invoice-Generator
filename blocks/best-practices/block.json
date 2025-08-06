@@ -42,6 +42,7 @@
             "default": [
                 {
                     "title": "Timing Your Invoices",
+                    "description": "Essential practices that will help you maintain professionalism and get paid faster.",
                     "practices": [
                         {
                             "icon": "📤",
@@ -85,6 +86,7 @@
                 },
                 {
                     "title": "Professional Invoice Tips",
+                    "description": "Essential practices that will help you maintain professionalism and get paid faster.",
                     "practices": [
                         {
                             "icon": "#️⃣",
@@ -136,6 +138,10 @@
         "mistakesTitle": {
             "type": "string",
             "default": "Common Invoice Mistakes to Avoid"
+        },
+        "mistakesDescription": {
+            "type": "string",
+            "default": "Avoid these common pitfalls that can delay payments and damage your professional reputation."
         },
         "mistakes": {
             "type": "array",

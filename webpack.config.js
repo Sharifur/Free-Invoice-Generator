@@ -11,7 +11,8 @@ module.exports = {
     'best-practices': './blocks/best-practices/src/index.js',
     'legal-compliance': './blocks/legal-compliance/src/index.js',
     'faq-section': './blocks/faq-section/src/index.js',
-    'related-tools': './blocks/related-tools/src/index.js'
+    'related-tools': './blocks/related-tools/src/index.js',
+    'taskip-cta': './blocks/taskip-cta/src/index.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

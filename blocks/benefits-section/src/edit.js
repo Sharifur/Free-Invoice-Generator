@@ -36,7 +36,10 @@ export default function Edit({ attributes, setAttributes }) {
         ctaUrl,
         showIcons,
         topPadding,
-        bottomPadding
+        bottomPadding,
+        ctaButtonBackgroundColor,
+        ctaButtonTextColor,
+        ctaButtonHoverColor
     } = attributes;
 
     const blockProps = useBlockProps({
@@ -110,6 +113,27 @@ export default function Edit({ attributes, setAttributes }) {
                             value: accentColor,
                             onChange: (color) => setAttributes({ accentColor: color }),
                             label: __('Accent Color', 'simple-invoice-generator')
+                        }
+                    ]}
+                />
+
+                <PanelColorSettings
+                    title={__('CTA Button Colors', 'simple-invoice-generator')}
+                    colorSettings={[
+                        {
+                            value: ctaButtonBackgroundColor,
+                            onChange: (color) => setAttributes({ ctaButtonBackgroundColor: color }),
+                            label: __('Button Background Color', 'simple-invoice-generator')
+                        },
+                        {
+                            value: ctaButtonTextColor,
+                            onChange: (color) => setAttributes({ ctaButtonTextColor: color }),
+                            label: __('Button Text Color', 'simple-invoice-generator')
+                        },
+                        {
+                            value: ctaButtonHoverColor,
+                            onChange: (color) => setAttributes({ ctaButtonHoverColor: color }),
+                            label: __('Button Hover Color', 'simple-invoice-generator')
                         }
                     ]}
                 />
@@ -364,7 +388,11 @@ export default function Edit({ attributes, setAttributes }) {
                                 <a 
                                     href={ctaUrl} 
                                     className="ib-cta-button"
-                                    style={{ background: `linear-gradient(135deg, ${accentColor} 0%, #764ba2 100%)` }}
+                                    style={{ 
+                                        backgroundColor: ctaButtonBackgroundColor,
+                                        color: ctaButtonTextColor,
+                                        '--cta-button-hover-color': ctaButtonHoverColor
+                                    }}
                                 >
                                     {ctaText}
                                 </a>

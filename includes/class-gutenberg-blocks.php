@@ -115,6 +115,12 @@ class SIG_Gutenberg_Blocks {
         if (file_exists($related_tools_block_path . 'block.json')) {
             register_block_type($related_tools_block_path);
         }
+        
+        // Register taskip cta block
+        $taskip_cta_block_path = SIG_PLUGIN_DIR . 'blocks/taskip-cta/';
+        if (file_exists($taskip_cta_block_path . 'block.json')) {
+            register_block_type($taskip_cta_block_path);
+        }
     }
     
     /**
@@ -158,7 +164,8 @@ class SIG_Gutenberg_Blocks {
             has_block('sig/best-practices') ||
             has_block('sig/legal-compliance') ||
             has_block('sig/faq-section') ||
-            has_block('sig/related-tools')) {
+            has_block('sig/related-tools') ||
+            has_block('sig/taskip-cta')) {
             
             wp_enqueue_style(
                 'sig-blocks-style',

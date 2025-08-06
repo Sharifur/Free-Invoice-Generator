@@ -9,16 +9,17 @@
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
+    .ib-section-header {
+        text-align: center;
+        max-width: 760px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
 }
 
 .ib-container {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.ib-section-header {
-    text-align: center;
-    margin-bottom: 60px;
 }
 
 .ib-section-title {
@@ -46,16 +47,6 @@
     padding: 50px;
     position: relative;
     overflow: hidden;
-}
-
-.ib-practice-group::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
 }
 
 .ib-group-header {
@@ -149,10 +140,15 @@
 }
 
 .ib-mistakes-header {
-    text-align: center;
-    margin-bottom: 30px;
+    max-width: 750px;
+    margin: 0 auto;
+    margin-bottom: 40px;
 }
-
+.ib-mistake-item strong {
+    color: #333333;
+    display: block;
+    margin-bottom: 15px;
+}
 .ib-mistakes-title {
     font-size: 28px;
     font-weight: 600;
@@ -184,20 +180,25 @@
     padding: 50px;
     margin-top: 60px;
     text-align: center;
+    .ib-pro-tips-content {
+        font-size: 18px;
+        opacity: 0.95;
+        max-width: 750px;
+        margin: 0 auto 30px;
+        color: #e5e4e4;
+    }
+
 }
 
 .ib-pro-tips-title {
     font-size: 32px;
     font-weight: 700;
-    margin-bottom: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    color: #fff;
 }
 
-.ib-pro-tips-content {
-    font-size: 18px;
-    opacity: 0.95;
-    max-width: 800px;
-    margin: 0 auto 30px;
-}
 
 .ib-download-guide-btn {
     background: #fff;

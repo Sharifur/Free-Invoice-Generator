@@ -171,12 +171,20 @@ export default function Edit({ attributes, setAttributes }) {
                                     value={faq.question}
                                     onChange={(value) => updateFAQ(globalIndex, 'question', value)}
                                 />
-                                <TextareaControl
-                                    label={__('Answer', 'simple-invoice-generator')}
-                                    value={faq.answer}
-                                    onChange={(value) => updateFAQ(globalIndex, 'answer', value)}
-                                    rows={4}
-                                />
+                                <div>
+                                    <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500' }}>
+                                        {__('Answer', 'simple-invoice-generator')}
+                                    </label>
+                                    <div style={{ border: '1px solid #ddd', borderRadius: '4px', padding: '10px', minHeight: '100px' }}>
+                                        <RichText
+                                            tagName="div"
+                                            value={faq.answer}
+                                            onChange={(value) => updateFAQ(globalIndex, 'answer', value)}
+                                            placeholder={__('Enter answer... (supports lists, links, and formatting)', 'simple-invoice-generator')}
+                                            allowedFormats={['core/bold', 'core/italic', 'core/link', 'core/list', 'core/strikethrough']}
+                                        />
+                                    </div>
+                                </div>
                                 <Button
                                     isDestructive
                                     isSmall

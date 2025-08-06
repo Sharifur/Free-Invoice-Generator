@@ -37,9 +37,11 @@
     z-index: 1;
 }
 
-.ib-section-header {
+.ib-benefits-section .ib-section-header {
     text-align: center;
-    margin-bottom: 60px;
+    max-width: 850px;
+    margin: 0 auto;
+    margin-bottom: 80px;
 }
 
 .ib-section-title {
@@ -149,7 +151,6 @@
     padding: 50px;
     text-align: center;
     box-shadow: 0 15px 50px rgba(102, 126, 234, 0.15);
-    border: 2px solid #667eea;
     margin-top: 60px;
 }
 
@@ -189,11 +190,11 @@
     color: #666;
 }
 
-.ib-cta-button-wrapper {
+.ib-benefits-section .ib-cta-button-wrapper {
     margin-top: 30px;
 }
 
-.ib-cta-button {
+.ib-benefits-section .ib-cta-button {
     display: inline-block;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: #fff;
@@ -206,11 +207,11 @@
     box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
 }
 
-.ib-cta-button:hover {
+.ib-benefits-section .ib-cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 30px rgba(102, 126, 234, 0.4);
-    color: #fff;
     text-decoration: none;
+    background-color: var(--cta-button-hover-color, #5a67d8) !important;
 }
 
 @media (max-width: 768px) {

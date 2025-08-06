@@ -11,6 +11,7 @@ export default function save({ attributes }) {
         practiceGroups,
         showMistakes,
         mistakesTitle,
+        mistakesDescription,
         mistakes,
         showProTips,
         proTipsTitle,
@@ -56,7 +57,12 @@ export default function save({ attributes }) {
                                     className="ib-group-title"
                                     value={group.title}
                                 />
-                                <p style={{ color: '#666', margin: '10px auto 20px', maxWidth: '750px' }}>Essential practices that will help you maintain professionalism and get paid faster.</p>
+                                <RichText.Content
+                                    tagName="p"
+                                    className="ib-group-description"
+                                    value={group.description || 'Essential practices that will help you maintain professionalism and get paid faster.'}
+                                    style={{ color: '#666', margin: '10px auto 20px', maxWidth: '750px' }}
+                                />
                             </div>
 
                             <div className="ib-practices-grid">
@@ -107,7 +113,12 @@ export default function save({ attributes }) {
                                     className="ib-mistakes-title"
                                     value={mistakesTitle}
                                 />
-                                <p style={{ color: '#666', margin: '10px auto 20px', maxWidth: '750px' }}>Avoid these common pitfalls that can delay payments and damage your professional reputation.</p>
+                                <RichText.Content
+                                    tagName="p"
+                                    className="ib-mistakes-description"
+                                    value={mistakesDescription || 'Avoid these common pitfalls that can delay payments and damage your professional reputation.'}
+                                    style={{ color: '#666', margin: '10px auto 20px', maxWidth: '750px' }}
+                                />
                             </div>
 
                             <div className="ib-mistakes-grid">

@@ -1,0 +1,89 @@
+.wp-block-sig-taskip-cta {
+    padding: 40px 20px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.wp-block-sig-taskip-cta[data-align="full"] {
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
+.wp-block-sig-taskip-cta[data-align="full"] .ib-taskip-cta-section {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.ib-taskip-cta-section .ib-taskip-title,
+.ib-taskip-cta-section .ib-taskip-subtitle,
+.ib-taskip-cta-section .ib-taskip-description,
+.ib-taskip-cta-section .ib-feature-title,
+.ib-taskip-cta-section .ib-feature-description {
+    cursor: text;
+}
+
+.block-editor-block-list__layout .wp-block-sig-taskip-cta {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+}
+
+.editor-styles-wrapper .wp-block-sig-taskip-cta {
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
+.ib-feature-card {
+    position: relative;
+}
+
+.ib-cta-button {
+    pointer-events: none;
+    cursor: text;
+}
+
+/* Editor-specific feature controls */
+.ib-features-grid .ib-feature-card:hover {
+    outline: 2px dashed #0073aa;
+}
+
+/* Better visibility for editing */
+.ib-taskip-title[data-is-placeholder-visible="true"],
+.ib-taskip-subtitle[data-is-placeholder-visible="true"],
+.ib-taskip-description[data-is-placeholder-visible="true"] {
+    opacity: 0.7;
+}
+
+/* Responsive editor styles */
+@media (max-width: 768px) {
+    .wp-block-sig-taskip-cta[data-align="full"] {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    
+    .ib-features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ib-taskip-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Inspector panel styles */
+.components-panel__body .ib-feature-card {
+    margin-bottom: 15px;
+    animation: none;
+}
+
+.components-panel__body .ib-feature-card:hover {
+    transform: none;
+    outline: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}

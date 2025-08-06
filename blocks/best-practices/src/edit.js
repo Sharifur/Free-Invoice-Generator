@@ -31,6 +31,7 @@ export default function Edit({ attributes, setAttributes }) {
         practiceGroups,
         showMistakes,
         mistakesTitle,
+        mistakesDescription,
         mistakes,
         showProTips,
         proTipsTitle,
@@ -79,6 +80,7 @@ export default function Edit({ attributes, setAttributes }) {
         const newGroup = {
             icon: '📋',
             title: 'New Practice Group',
+            description: 'Essential practices that will help you maintain professionalism and get paid faster.',
             useImage: false,
             imageUrl: '',
             imageId: null,
@@ -296,7 +298,14 @@ export default function Edit({ attributes, setAttributes }) {
                                         onChange={(value) => updatePracticeGroup(groupIndex, 'title', value)}
                                         placeholder={__('Group title...', 'simple-invoice-generator')}
                                     />
-                                    <p style={{ color: '#666', margin: '10px auto 20px', maxWidth: '750px' }}>Essential practices that will help you maintain professionalism and get paid faster.</p>
+                                    <RichText
+                                        tagName="p"
+                                        className="ib-group-description"
+                                        value={group.description || 'Essential practices that will help you maintain professionalism and get paid faster.'}
+                                        onChange={(value) => updatePracticeGroup(groupIndex, 'description', value)}
+                                        placeholder={__('Group description...', 'simple-invoice-generator')}
+                                        style={{ color: '#666', margin: '10px auto 20px', maxWidth: '750px' }}
+                                    />
                                 </div>
 
                                 <div className="ib-practices-grid">
@@ -462,7 +471,14 @@ export default function Edit({ attributes, setAttributes }) {
                                         onChange={(value) => setAttributes({ mistakesTitle: value })}
                                         placeholder={__('Mistakes section title...', 'simple-invoice-generator')}
                                     />
-                                    <p style={{ color: '#666', margin: '10px auto 20px', maxWidth: '750px' }}>Avoid these common pitfalls that can delay payments and damage your professional reputation.</p>
+                                    <RichText
+                                        tagName="p"
+                                        className="ib-mistakes-description"
+                                        value={mistakesDescription || 'Avoid these common pitfalls that can delay payments and damage your professional reputation.'}
+                                        onChange={(value) => setAttributes({ mistakesDescription: value })}
+                                        placeholder={__('Mistakes section description...', 'simple-invoice-generator')}
+                                        style={{ color: '#666', margin: '10px auto 20px', maxWidth: '750px' }}
+                                    />
                                 </div>
 
                                 <div className="ib-mistakes-grid">
