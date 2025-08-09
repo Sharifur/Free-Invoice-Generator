@@ -1072,32 +1072,664 @@
     color: var(--text-color);
 }
 
-/* Responsive */
+/* Responsive Breakpoints */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+    .sig-customizer-panel {
+        width: 350px;
+    }
+    
+    .sig-layout-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    
+    .sig-color-schemes {
+        justify-content: center;
+    }
+}
+
+/* Tablets */
+@media (max-width: 968px) {
+    .sig-edit-mode {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .sig-invoice-preview {
+        padding: 30px 20px;
+    }
+    
+    .sig-header-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .sig-invoice-meta {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .sig-totals-container {
+        width: 100%;
+    }
+    
+    .sig-invoice-totals {
+        justify-content: center;
+    }
+}
+
+/* Mobile devices */
 @media (max-width: 768px) {
     .sig-invoice-generator-container {
         padding: 10px;
+        margin: 0;
+    }
+    
+    .sig-content {
+        padding: 20px 15px;
     }
     
     .sig-header {
         flex-direction: column;
         gap: 15px;
+        padding: 15px 20px;
     }
     
-    .sig-invoice-meta {
-        grid-template-columns: 1fr;
+    .sig-header h2 {
+        font-size: 20px;
+        text-align: center;
     }
     
-    .sig-customizer-panel {
+    .sig-header-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .sig-tab-switcher {
         width: 100%;
+        max-width: 300px;
+    }
+    
+    .sig-tab {
+        padding: 10px 15px;
+        font-size: 13px;
+        flex: 1;
+        text-align: center;
+    }
+    
+    .sig-section {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .sig-section h3 {
+        font-size: 16px;
     }
     
     .sig-form-row {
         grid-template-columns: 1fr;
+        gap: 10px;
     }
     
+    .sig-form-group {
+        margin-bottom: 15px;
+    }
+    
+    .sig-form-group input,
+    .sig-form-group textarea,
+    .sig-form-group select {
+        padding: 12px;
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+    
+    /* Table responsiveness - Card Layout on Mobile */
+    .sig-table-wrapper {
+        overflow: visible;
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
+    
+    /* Hide table headers on mobile */
+    .sig-line-items-table thead {
+        display: none;
+    }
+    
+    /* Convert table to card layout */
+    .sig-line-items-table {
+        display: block;
+        width: 100%;
+    }
+    
+    .sig-line-items-table tbody {
+        display: block;
+    }
+    
+    .sig-line-items-table tr {
+        display: block;
+        margin-bottom: 15px;
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        position: relative;
+    }
+    
+    .sig-line-items-table td {
+        display: block;
+        text-align: left;
+        padding: 8px 0;
+        border: none;
+        position: relative;
+        padding-left: 35%;
+    }
+    
+    .sig-line-items-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 30%;
+        padding-right: 10px;
+        font-weight: 600;
+        font-size: 12px;
+        color: #555;
+    }
+    
+    /* Special handling for drag handle */
+    .sig-drag-cell {
+        display: none;
+    }
+    
+    /* Description field full width */
+    .sig-description-cell {
+        padding-left: 0 !important;
+    }
+    
+    .sig-description-cell:before {
+        position: static;
+        display: block;
+        margin-bottom: 5px;
+        width: 100%;
+    }
+    
+    .sig-description-cell textarea {
+        width: 100%;
+        min-width: unset;
+        font-size: 14px;
+        padding: 10px;
+        margin-top: 5px;
+    }
+    
+    /* Quantity and Rate inputs */
+    .sig-quantity-cell,
+    .sig-rate-cell {
+        display: inline-block;
+        width: 48%;
+    }
+    
+    .sig-quantity-cell input,
+    .sig-rate-cell input {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    /* Amount display */
+    .sig-amount-cell {
+        font-weight: 600;
+        font-size: 16px;
+        color: #2c3e50;
+        padding-top: 12px;
+        border-top: 1px solid #e0e0e0;
+        margin-top: 8px;
+    }
+    
+    /* Remove button positioning */
+    .sig-actions-cell {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 0 !important;
+        width: auto;
+    }
+    
+    .sig-actions-cell:before {
+        display: none;
+    }
+    
+    .sig-btn-remove {
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+        border-radius: 50%;
+    }
+    
+    /* Add new item button */
+    .sig-btn-add-item {
+        margin-top: 20px;
+        padding: 15px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+    
+    /* Calculations panel */
+    .sig-calculations-grid {
+        padding: 15px;
+    }
+    
+    .sig-calc-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px 0;
+    }
+    
+    .sig-calc-label-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .sig-discount-controls,
+    .sig-tax-controls {
+        width: 100%;
+        justify-content: flex-end;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    
+    .sig-discount-input,
+    .sig-tax-input,
+    .sig-shipping-input {
+        width: 70px !important;
+        padding: 8px !important;
+        font-size: 14px !important;
+    }
+    
+    .sig-discount-type {
+        width: 50px !important;
+        padding: 8px !important;
+        font-size: 13px !important;
+    }
+    
+    .sig-shipping-description {
+        width: 120px !important;
+        padding: 8px !important;
+        font-size: 13px !important;
+    }
+    
+    /* Customizer panel on mobile */
+    .sig-customizer-panel {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+    }
+    
+    .sig-customizer-content {
+        padding: 15px;
+    }
+    
+    .sig-customizer-section {
+        margin-bottom: 25px;
+    }
+    
+    .sig-layout-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .sig-layout-option {
+        padding: 10px;
+    }
+    
+    .sig-layout-preview-container {
+        height: 60px;
+    }
+    
+    .sig-layout-preview {
+        width: 45px;
+        height: 54px;
+    }
+    
+    .sig-layout-label {
+        font-size: 11px;
+    }
+    
+    .sig-layout-description {
+        font-size: 9px;
+    }
+    
+    .sig-color-schemes {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+    }
+    
+    .sig-color-scheme-btn {
+        width: 60px;
+        height: 40px;
+        font-size: 9px;
+    }
+    
+    /* Export actions */
     .sig-export-actions {
         flex-direction: column;
         align-items: stretch;
+        gap: 10px;
+    }
+    
+    .sig-btn {
+        padding: 12px 16px;
+        font-size: 14px;
+        justify-content: center;
+    }
+    
+    /* Invoice preview on mobile */
+    .sig-invoice-preview {
+        padding: 20px 15px;
+        margin: 0 -15px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    
+    .sig-invoice-title h2 {
+        font-size: 24px;
+    }
+    
+    .sig-company-logo img {
+        max-width: 120px;
+        max-height: 60px;
+    }
+    
+    .sig-company-info h1 {
+        font-size: 18px;
+    }
+    
+    .sig-contact-info {
+        font-size: 13px;
+    }
+    
+    .sig-invoice-details table {
+        font-size: 13px;
+    }
+    
+    /* Invoice preview table responsiveness */
+    .sig-invoice-items {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 0 -15px;
+        padding: 0 15px;
+        position: relative;
+    }
+    
+    /* Scroll indicator for tables */
+    .sig-invoice-items:before {
+        content: '← Scroll →';
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 11px;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 10;
+    }
+    
+    .sig-invoice-items.scrollable:before {
+        opacity: 1;
+    }
+    
+    .sig-invoice-items table {
+        min-width: 500px;
+    }
+    
+    .sig-invoice-items th,
+    .sig-invoice-items td {
+        padding: 8px 6px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+    
+    .sig-item-description {
+        white-space: normal !important;
+        min-width: 150px;
+    }
+    
+    .sig-total-final {
+        font-size: 16px;
+    }
+    
+    /* Logo upload on mobile */
+    .sig-logo-upload {
+        padding: 20px;
+    }
+    
+    .sig-logo-preview img {
+        max-width: 150px;
+        max-height: 75px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    /* Invoice items table - convert to stacked layout */
+    .sig-invoice-items {
+        overflow: visible;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .sig-invoice-items:before {
+        display: none;
+    }
+    
+    .sig-invoice-items table {
+        min-width: unset;
+        width: 100%;
+    }
+    
+    .sig-invoice-items thead {
+        display: none;
+    }
+    
+    .sig-invoice-items tbody tr {
+        display: block;
+        margin-bottom: 12px;
+        padding: 12px;
+        background: #f9f9f9;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+    }
+    
+    .sig-invoice-items tbody td {
+        display: block;
+        text-align: left;
+        padding: 6px 0;
+        white-space: normal;
+        font-size: 13px;
+    }
+    
+    .sig-invoice-items tbody td:before {
+        content: attr(data-label);
+        font-weight: 600;
+        display: inline-block;
+        width: 80px;
+        margin-right: 10px;
+        color: #555;
+        font-size: 12px;
+    }
+    
+    .sig-item-description {
+        font-weight: 600;
+        margin-bottom: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    .sig-item-description:before {
+        display: none;
+    }
+    
+    .sig-item-amount {
+        text-align: left !important;
+        font-weight: 600;
+        color: #2c3e50;
+        font-size: 14px;
+        padding-top: 8px;
+        border-top: 1px solid #ddd;
+        margin-top: 8px;
+    }
+
+@media (max-width: 480px) {
+    .sig-invoice-generator-container {
+        padding: 5px;
+    }
+    
+    .sig-content {
+        padding: 15px 10px;
+    }
+    
+    .sig-header {
+        padding: 12px 15px;
+    }
+    
+    .sig-header h2 {
+        font-size: 18px;
+    }
+    
+    .sig-section {
+        padding: 12px;
+    }
+    
+    .sig-section h3 {
+        font-size: 15px;
+    }
+    
+    .sig-tab {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    .sig-form-group input,
+    .sig-form-group textarea,
+    .sig-form-group select {
+        padding: 10px;
+    }
+    
+    .sig-line-items-table th,
+    .sig-line-items-table td {
+        padding: 6px 4px;
+        font-size: 12px;
+    }
+    
+    .sig-description-cell textarea {
+        min-width: 120px;
+        padding: 6px;
+        font-size: 13px;
+    }
+    
+    .sig-quantity-cell input,
+    .sig-rate-cell input {
+        width: 50px;
+        padding: 6px 4px;
+        font-size: 12px;
+    }
+    
+    .sig-calculations-grid {
+        padding: 12px;
+    }
+    
+    .sig-discount-input,
+    .sig-tax-input,
+    .sig-shipping-input {
+        width: 60px !important;
+        font-size: 13px !important;
+    }
+    
+    .sig-shipping-description {
+        width: 100px !important;
+        font-size: 12px !important;
+    }
+    
+    .sig-invoice-preview {
+        padding: 15px 10px;
+    }
+    
+    .sig-invoice-title h2 {
+        font-size: 20px;
+    }
+    
+    .sig-company-info h1 {
+        font-size: 16px;
+    }
+    
+    .sig-contact-info,
+    .sig-invoice-details table {
+        font-size: 12px;
+    }
+    
+    .sig-invoice-items th,
+    .sig-invoice-items td {
+        padding: 6px 4px;
+        font-size: 12px;
+    }
+    
+    .sig-layout-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sig-color-schemes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sig-btn {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+    .sig-customizer-panel {
+        height: 100vh;
+        overflow-y: auto;
+    }
+    
+    .sig-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .sig-header h2 {
+        text-align: left;
+    }
+    
+    .sig-header-actions {
+        justify-content: flex-end;
+    }
+    
+    .sig-tab-switcher {
+        width: auto;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .sig-logo-preview img,
+    .sig-company-logo img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
     }
 }
 

@@ -1,0 +1,716 @@
+/* Taskip Quotation Generator Styles */
+
+.taskip-quotation-generator-anchor {
+    scroll-margin-top: 80px;
+}
+
+.taskip-quotation-generator {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.taskip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.taskip-header h2 {
+    margin: 0;
+    color: #1a202c;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.taskip-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.taskip-tab-switcher {
+    display: flex;
+    background: #f7fafc;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.taskip-tab {
+    padding: 8px 16px;
+    border: none;
+    background: transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.taskip-tab.active {
+    background: #667eea;
+    color: white;
+}
+
+.taskip-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.taskip-btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.taskip-btn-primary:hover {
+    background: #5a67d8;
+}
+
+.taskip-btn-secondary {
+    background: #e2e8f0;
+    color: #4a5568;
+}
+
+.taskip-btn-secondary:hover {
+    background: #cbd5e0;
+}
+
+.taskip-btn-success {
+    background: #48bb78;
+    color: white;
+}
+
+.taskip-btn-success:hover {
+    background: #38a169;
+}
+
+.taskip-section {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.taskip-section h3 {
+    margin: 0 0 20px 0;
+    color: #1a202c;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.taskip-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.taskip-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.taskip-field label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+.taskip-field input,
+.taskip-field select,
+.taskip-field textarea {
+    padding: 10px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.taskip-field input:focus,
+.taskip-field select:focus,
+.taskip-field textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Quotation Preview Styles */
+.taskip-quotation-preview {
+    background: white;
+    min-height: 600px;
+}
+
+.taskip-document {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.taskip-document-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.taskip-logo {
+    max-width: 150px;
+    max-height: 80px;
+    margin-bottom: 20px;
+}
+
+.taskip-company-details h1 {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+    color: #1a202c;
+}
+
+.taskip-address p {
+    margin: 2px 0;
+    color: #4a5568;
+    font-size: 14px;
+}
+
+.taskip-document-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #667eea;
+    margin: 0 0 20px 0;
+    text-align: right;
+}
+
+.taskip-status {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.status-draft {
+    background: #f7fafc;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+}
+
+.status-sent {
+    background: #ebf8ff;
+    color: #2b6cb0;
+    border: 1px solid #bee3f8;
+}
+
+.status-accepted {
+    background: #f0fff4;
+    color: #276749;
+    border: 1px solid #9ae6b4;
+}
+
+.status-rejected {
+    background: #fed7e2;
+    color: #c53030;
+    border: 1px solid #fbb6ce;
+}
+
+.taskip-detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.taskip-detail-row span:first-child {
+    color: #4a5568;
+}
+
+.taskip-detail-row span:last-child {
+    font-weight: 500;
+    color: #1a202c;
+}
+
+.taskip-client-section {
+    margin-bottom: 30px;
+}
+
+.taskip-client-section h3 {
+    margin: 0 0 15px 0;
+    color: #1a202c;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.taskip-client-info p {
+    margin: 3px 0;
+    color: #4a5568;
+    font-size: 14px;
+}
+
+.taskip-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.taskip-items-table th,
+.taskip-items-table td {
+    padding: 12px 8px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.taskip-items-table th {
+    background: #f7fafc;
+    font-weight: 600;
+    color: #1a202c;
+    font-size: 14px;
+}
+
+.taskip-items-table td {
+    font-size: 14px;
+    color: #4a5568;
+}
+
+.taskip-item-description strong {
+    color: #1a202c;
+}
+
+.taskip-item-details {
+    font-size: 12px;
+    color: #718096;
+    margin-top: 4px;
+}
+
+.taskip-totals-section {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+}
+
+.taskip-totals-table {
+    min-width: 300px;
+}
+
+.taskip-total-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.taskip-final-total {
+    border-top: 2px solid #1a202c;
+    border-bottom: 2px solid #1a202c;
+    font-size: 18px;
+    padding: 12px 0;
+    margin-top: 10px;
+}
+
+.taskip-quotation-actions {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.taskip-client-actions,
+.taskip-admin-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.taskip-disclaimer {
+    background: #f7fafc;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    margin-top: 30px;
+}
+
+.taskip-disclaimer p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #4a5568;
+}
+
+/* Drag and Drop Styles */
+.taskip-line-item.drag-over {
+    border: 2px dashed #667eea !important;
+    background: rgba(102, 126, 234, 0.1) !important;
+    transform: scale(1.02);
+}
+
+.taskip-line-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.taskip-line-item.dragging {
+    opacity: 0.5;
+    transform: rotate(5deg);
+}
+
+/* Enhanced Button Styles */
+.taskip-btn {
+    transition: all 0.3s ease;
+}
+
+.taskip-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.taskip-tab {
+    transition: all 0.2s ease;
+}
+
+.taskip-tab:hover {
+    transform: translateY(-1px);
+}
+
+.taskip-tab.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Section Enhancements */
+.taskip-section {
+    transition: all 0.2s ease;
+}
+
+.taskip-section:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Input Focus Enhancements */
+.taskip-field input:focus,
+.taskip-field select:focus,
+.taskip-field textarea:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .taskip-quotation-generator {
+        padding: 10px;
+    }
+    
+    .taskip-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .taskip-header-actions {
+        justify-content: space-between;
+    }
+    
+    .taskip-document {
+        padding: 20px;
+    }
+    
+    .taskip-document-header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: left;
+    }
+    
+    .taskip-document-title {
+        text-align: left;
+        font-size: 24px;
+    }
+    
+    .taskip-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .taskip-totals-section {
+        justify-content: stretch;
+    }
+    
+    .taskip-totals-table {
+        min-width: 100%;
+    }
+    
+    .taskip-client-actions,
+    .taskip-admin-actions {
+        flex-direction: column;
+    }
+    
+    .taskip-btn {
+        width: 100%;
+    }
+}
+
+@media print {
+    .taskip-header,
+    .taskip-quotation-actions,
+    .taskip-btn,
+    .print-hide {
+        display: none !important;
+    }
+    
+    .taskip-document {
+        box-shadow: none;
+        padding: 0;
+    }
+    
+    .taskip-quotation-preview {
+        background: white;
+    }
+    
+    /* Hide calendar icon from date inputs */
+    input[type="date"]::-webkit-calendar-picker-indicator,
+    input[type="date"]::-webkit-inner-spin-button,
+    input[type="date"]::-webkit-clear-button {
+        display: none !important;
+    }
+    
+    /* Hide all input styling */
+    input, textarea, select { 
+        background: transparent !important; 
+        border: none !important; 
+        outline: none !important;
+        resize: none !important;
+    }
+    
+    /* Fix totals alignment when Tax & Discount Settings are hidden */
+    div[style*="grid-template-columns"] { 
+        display: block !important; 
+    }
+    
+    .taskip-totals-section { 
+        display: flex !important; 
+        justify-content: flex-end !important; 
+        width: 100% !important;
+        margin-bottom: 40px !important; 
+    }
+    
+    /* Ensure print color accuracy */
+    * { 
+        -webkit-print-color-adjust: exact !important;
+        box-shadow: none !important;
+    }
+}
+
+/* Customization Sheet Styles */
+.taskip-customization-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.taskip-customization-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.taskip-customization-sheet {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    transition: right 0.3s ease;
+    overflow-y: auto;
+    padding: 0;
+}
+
+.taskip-customization-sheet.active {
+    right: 0;
+}
+
+.taskip-sheet-header {
+    padding: 20px;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8f9fa;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.taskip-sheet-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a202c;
+}
+
+.taskip-sheet-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #6c757d;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.taskip-sheet-close:hover {
+    background: #e9ecef;
+    color: #495057;
+}
+
+.taskip-sheet-content {
+    padding: 20px;
+}
+
+.taskip-customization-section {
+    margin-bottom: 30px;
+}
+
+.taskip-customization-section h4 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 8px;
+}
+
+.taskip-color-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.taskip-color-input label {
+    flex: 1;
+    font-weight: 500;
+    color: #495057;
+    margin: 0;
+}
+
+.taskip-color-input input[type="color"] {
+    width: 50px;
+    height: 40px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.taskip-color-input input[type="color"]:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.taskip-header-styles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.taskip-header-style {
+    padding: 15px 10px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.taskip-header-style:hover {
+    border-color: #cbd5e0;
+    background: #f8f9fa;
+}
+
+.taskip-header-style.active {
+    border-color: #667eea;
+    background: rgba(102, 126, 234, 0.1);
+}
+
+.taskip-header-style svg {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+}
+
+.taskip-header-style span {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #495057;
+}
+
+.taskip-checkbox-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.taskip-checkbox-field input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.taskip-checkbox-field label {
+    margin: 0;
+    font-weight: 500;
+    color: #495057;
+    cursor: pointer;
+}
+
+.taskip-sheet-actions {
+    padding: 20px;
+    border-top: 1px solid #e2e8f0;
+    background: #f8f9fa;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .taskip-customization-sheet {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .taskip-header-styles {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

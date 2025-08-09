@@ -39,6 +39,7 @@ class SIG_Admin_Settings {
         $rate_limit = get_option('sig_rate_limit', 10);
         $invoice_count = get_option('sig_invoice_count', 0);
         $target_page = get_option('sig_target_page_id', '');
+        $quotation_target_page = get_option('sig_quotation_target_page_id', '');
         
         ?>
         <div class="wrap">
@@ -140,7 +141,7 @@ class SIG_Admin_Settings {
                     
                     <tr>
                         <th scope="row">
-                            <label for="sig_target_page"><?php _e('Target Page', 'simple-invoice-generator'); ?></label>
+                            <label for="sig_target_page"><?php _e('Invoice Generator Target Page', 'simple-invoice-generator'); ?></label>
                         </th>
                         <td>
                             <?php
@@ -159,14 +160,38 @@ class SIG_Admin_Settings {
                     </tr>
                     
                     <tr>
-                        <th scope="row"><?php _e('Shortcode', 'simple-invoice-generator'); ?></th>
+                        <th scope="row">
+                            <label for="sig_quotation_target_page"><?php _e('Quotation Generator Target Page', 'simple-invoice-generator'); ?></label>
+                        </th>
                         <td>
+                            <select id="sig_quotation_target_page" name="sig_quotation_target_page_id">
+                                <option value=""><?php _e('Load on all pages (using shortcode detection)', 'simple-invoice-generator'); ?></option>
+                                <?php foreach ($pages as $page): ?>
+                                    <option value="<?php echo esc_attr($page->ID); ?>" <?php selected($quotation_target_page, $page->ID); ?>>
+                                        <?php echo esc_html($page->post_title . ' (ID: ' . $page->ID . ')'); ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                            <p class="description"><?php _e('Select a specific page where the quotation generator will be used. This will load CSS/JS files only on that page for better performance. Leave empty to use automatic shortcode detection.', 'simple-invoice-generator'); ?></p>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row"><?php _e('Shortcodes', 'simple-invoice-generator'); ?></th>
+                        <td>
+                            <p><strong><?php _e('Invoice Generator:', 'simple-invoice-generator'); ?></strong></p>
                             <code>[invoice_generator]</code>
                             <p class="description"><?php _e('Copy this shortcode and paste it into any page or post where you want the invoice generator to appear.', 'simple-invoice-generator'); ?></p>
-                            <p class="description"><?php _e('Optional parameters:', 'simple-invoice-generator'); ?></p>
+                            
+                            <p><strong><?php _e('Quotation Generator:', 'simple-invoice-generator'); ?></strong></p>
+                            <code>[taskip_quotation_generator]</code>
+                            <p class="description"><?php _e('Copy this shortcode and paste it into any page or post where you want the quotation generator to appear.', 'simple-invoice-generator'); ?></p>
+                            
+                            <p class="description"><?php _e('Optional parameters for both:', 'simple-invoice-generator'); ?></p>
                             <ul style="list-style: disc; margin-left: 20px;">
                                 <li><code>currency="USD"</code> - <?php _e('Set default currency', 'simple-invoice-generator'); ?></li>
-                                <li><code>theme="blue"</code> - <?php _e('Set color theme', 'simple-invoice-generator'); ?></li>
+                                <li><code>theme="default"</code> - <?php _e('Set color theme', 'simple-invoice-generator'); ?></li>
+                                <li><code>validity_days="30"</code> - <?php _e('Set default validity days (quotation only)', 'simple-invoice-generator'); ?></li>
                             </ul>
                         </td>
                     </tr>
@@ -213,6 +238,11 @@ class SIG_Admin_Settings {
         // Save target page
         if (isset($_POST['sig_target_page_id'])) {
             update_option('sig_target_page_id', intval($_POST['sig_target_page_id']));
+        }
+        
+        // Save quotation target page
+        if (isset($_POST['sig_quotation_target_page_id'])) {
+            update_option('sig_quotation_target_page_id', intval($_POST['sig_quotation_target_page_id']));
         }
         
         // Reset analytics if requested

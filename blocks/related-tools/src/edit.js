@@ -274,10 +274,10 @@ export default function Edit({ attributes, setAttributes }) {
                                             onChange={(value) => updateTool(index, 'badgeType', value)}
                                         />
                                     </div>
-
-                                    <div className="ib-tool-cta" style={{ color: accentColor }}>
-                                        <span>Try {tool.name}</span>
-                                        <div className="ib-tool-cta-arrow">→</div>
+                                    <div className="ib-tool-cta">
+                                        <a href={tool.url} style={{ color: accentColor }}>
+                                            <span>Try {tool.name}</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

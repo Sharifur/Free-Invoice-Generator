@@ -48,6 +48,23 @@ class SIG_Enqueue {
             array(),
             SIG_VERSION
         );
+        
+        // Register quotation app script
+        wp_register_script(
+            'sig-quotation-app',
+            SIG_PLUGIN_URL . 'dist/quotation-app.js',
+            array('react', 'react-dom', 'wp-element', 'wp-components', 'wp-i18n'),
+            SIG_VERSION,
+            true
+        );
+        
+        // Register quotation styles
+        wp_register_style(
+            'sig-quotation-styles',
+            SIG_PLUGIN_URL . 'assets/css/quotation-generator.css',
+            array(),
+            SIG_VERSION
+        );
     }
     
     /**
@@ -56,24 +73,54 @@ class SIG_Enqueue {
     public function enqueue_frontend() {
         global $post;
         
-        // Check if we should enqueue based on settings
-        $target_page_id = get_option('sig_target_page_id', '');
+        $invoice_target_page_id = get_option('sig_target_page_id', '');
+        $quotation_target_page_id = get_option('sig_quotation_target_page_id', '');
         
-        if (!empty($target_page_id)) {
-            // If a specific page is set, only enqueue on that page
-            if (!is_page($target_page_id)) {
-                return;
+        $should_load_invoice = false;
+        $should_load_quotation = false;
+        
+        // Check invoice generator loading conditions
+        if (!empty($invoice_target_page_id)) {
+            // If specific page is set, only load on that page
+            if (is_page($invoice_target_page_id)) {
+                $should_load_invoice = true;
             }
         } else {
-            // Fall back to shortcode detection if no specific page is set
-            if (!is_a($post, 'WP_Post') || !has_shortcode($post->post_content, 'invoice_generator')) {
-                return;
+            // Use shortcode detection
+            if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'invoice_generator')) {
+                $should_load_invoice = true;
             }
         }
         
-        // Enqueue registered scripts
-        wp_enqueue_script('sig-invoice-app');
-        wp_enqueue_style('sig-invoice-styles');
+        // Check quotation generator loading conditions
+        if (!empty($quotation_target_page_id)) {
+            // If specific page is set, only load on that page
+            if (is_page($quotation_target_page_id)) {
+                $should_load_quotation = true;
+            }
+        } else {
+            // Use shortcode detection
+            if (is_a($post, 'WP_Post') && has_shortcode($post->post_content, 'taskip_quotation_generator')) {
+                $should_load_quotation = true;
+            }
+        }
+        
+        // Enqueue invoice assets if needed
+        if ($should_load_invoice) {
+            wp_enqueue_script('sig-invoice-app');
+            wp_enqueue_style('sig-invoice-styles');
+        }
+        
+        // Enqueue quotation assets if needed
+        if ($should_load_quotation) {
+            wp_enqueue_script('sig-quotation-app');
+            wp_enqueue_style('sig-quotation-styles');
+        }
+        
+        // If nothing should be loaded, return early
+        if (!$should_load_invoice && !$should_load_quotation) {
+            return;
+        }
         
         // Add inline styles for print
         $print_styles = '

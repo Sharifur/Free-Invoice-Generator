@@ -11,6 +11,9 @@ import { __ } from '@wordpress/i18n';
 // Import FAQ Section block
 import './faq-section/src/index.js';
 
+// Import Features Section block
+import './features-section/src/index.js';
+
 // Callout Block
 registerBlockType('sig/callout-box', {
     title: __('Callout Box', 'simple-invoice-generator'),

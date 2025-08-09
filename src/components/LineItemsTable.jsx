@@ -24,12 +24,12 @@ const SortableItem = ({ item, onUpdate, onRemove, currency, currencySymbol }) =>
 
     return (
         <tr ref={setNodeRef} style={style} className="sig-line-item">
-            <td className="sig-drag-cell">
+            <td className="sig-drag-cell" data-label="">
                 <span className="sig-drag-handle" {...attributes} {...listeners}>
                     ⋮⋮
                 </span>
             </td>
-            <td className="sig-description-cell">
+            <td className="sig-description-cell" data-label="Description">
                 <textarea
                     value={item.description}
                     onChange={(e) => onUpdate(item.id, 'description', e.target.value)}
@@ -37,7 +37,7 @@ const SortableItem = ({ item, onUpdate, onRemove, currency, currencySymbol }) =>
                     rows="2"
                 />
             </td>
-            <td className="sig-quantity-cell">
+            <td className="sig-quantity-cell" data-label="Quantity">
                 <input
                     type="number"
                     value={item.quantity}
@@ -46,7 +46,7 @@ const SortableItem = ({ item, onUpdate, onRemove, currency, currencySymbol }) =>
                     step="1"
                 />
             </td>
-            <td className="sig-rate-cell">
+            <td className="sig-rate-cell" data-label="Rate">
                 <div className="sig-currency-input">
                     <span className="sig-currency-symbol">{currencySymbol}</span>
                     <input
@@ -58,10 +58,10 @@ const SortableItem = ({ item, onUpdate, onRemove, currency, currencySymbol }) =>
                     />
                 </div>
             </td>
-            <td className="sig-amount-cell">
+            <td className="sig-amount-cell" data-label="Amount">
                 {formatCurrency(item.amount, currency)}
             </td>
-            <td className="sig-actions-cell">
+            <td className="sig-actions-cell" data-label="">
                 <button
                     type="button"
                     onClick={() => onRemove(item.id)}

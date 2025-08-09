@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
   entry: {
     app: './src/index.js',
+    'quotation-app': './src/quotation-app.js',
     blocks: './blocks/blocks.js',
     'hero-section': './blocks/hero-section/src/index.js',
     'steps-guide': './blocks/steps-guide/src/index.js',
@@ -12,7 +13,8 @@ module.exports = {
     'legal-compliance': './blocks/legal-compliance/src/index.js',
     'faq-section': './blocks/faq-section/src/index.js',
     'related-tools': './blocks/related-tools/src/index.js',
-    'taskip-cta': './blocks/taskip-cta/src/index.js'
+    'taskip-cta': './blocks/taskip-cta/src/index.js',
+    'features-section': './blocks/features-section/src/index.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

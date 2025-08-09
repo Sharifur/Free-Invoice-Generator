@@ -79,10 +79,11 @@ export default function save({ attributes }) {
                                     ))}
                                 </ul>
 
-                                <a href={tool.url} className="ib-tool-cta" style={{ color: accentColor }}>
-                                    <span>Try {tool.name}</span>
-                                    <div className="ib-tool-cta-arrow">→</div>
-                                </a>
+                                <div className="ib-tool-cta">
+                                    <a href={tool.url} style={{ color: accentColor }}>
+                                        <span>Try {tool.name}</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     ))}

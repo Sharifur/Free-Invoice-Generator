@@ -3,7 +3,7 @@
  * Plugin Name: Simple Invoice Generator
  * Plugin URI: https://taskip.net/tools/invoice-generator
  * Description: Generate professional invoices without requiring login using React-based interface
- * Version: 1.5.0
+ * Version: 1.7.0
  * Author: Sharifur
  * License: GPL v2 or later
  * Text Domain: simple-invoice-generator
@@ -15,18 +15,22 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('SIG_VERSION', '1.5.0');
+define('SIG_VERSION', '1.7.0');
 define('SIG_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('SIG_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('SIG_PLUGIN_BASENAME', plugin_basename(__FILE__));
 
 // Include required files
 require_once SIG_PLUGIN_DIR . 'includes/class-invoice-generator.php';
+require_once SIG_PLUGIN_DIR . 'includes/class-quotation-shortcode.php';
 
 // Initialize the plugin
 function sig_init() {
     $invoice_generator = new Simple_Invoice_Generator();
     $invoice_generator->init();
+    
+    $quotation_shortcode = new Taskip_Quotation_Shortcode();
+    $quotation_shortcode->init();
 }
 add_action('plugins_loaded', 'sig_init');
 

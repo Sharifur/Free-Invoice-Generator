@@ -1,0 +1,66 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/features-section",
+    "version": "1.0.0",
+    "title": "Taskip: Features Section",
+    "category": "sig-blocks",
+    "icon": "star-filled",
+    "description": "Showcase the key features and benefits of your service with attractive cards",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Why Choose TaskIP's Free Quotation Generator?"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "section description"
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#f8f9fa"
+        },
+        "features": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "⚡",
+                    "title": "Lightning Fast Creation",
+                    "description": "Generate professional quotations in under 60 seconds. Our smart form fields and auto-calculations save you hours of manual work."
+                },
+                {
+                    "icon": "🎨",
+                    "title": "Professional Templates",
+                    "description": "Choose from beautifully designed templates for every industry. Customize colors, fonts, and layouts to match your brand perfectly."
+                },
+                {
+                    "icon": "📊",
+                    "title": "Smart Calculations",
+                    "description": "Automatic tax calculations, discount management, and multi-currency support. Handle GST, VAT, and sales tax effortlessly."
+                },
+                {
+                    "icon": "📧",
+                    "title": "Instant Sharing",
+                    "description": "Send quotations directly via email or download as PDF. Share via WhatsApp or generate a unique link for client access."
+                }
+            ]
+        },
+        "topPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "bottomPadding": {
+            "type": "number",
+            "default": 80
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/features-section.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css"
+}

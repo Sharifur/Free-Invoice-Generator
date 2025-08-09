@@ -113,12 +113,12 @@ const InvoicePreview = () => {
                     <tbody>
                         {invoiceData.lineItems.map(item => (
                             <tr key={item.id}>
-                                <td className="sig-item-description">{item.description}</td>
-                                <td className="sig-item-quantity">{item.quantity}</td>
-                                <td className="sig-item-rate">
+                                <td className="sig-item-description" data-label="Description">{item.description}</td>
+                                <td className="sig-item-quantity" data-label="Quantity">{item.quantity}</td>
+                                <td className="sig-item-rate" data-label="Rate">
                                     {formatCurrency(item.rate, invoiceData.invoice.currency)}
                                 </td>
-                                <td className="sig-item-amount">
+                                <td className="sig-item-amount" data-label="Amount">
                                     {formatCurrency(item.amount, invoiceData.invoice.currency)}
                                 </td>
                             </tr>
