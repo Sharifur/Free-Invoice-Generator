@@ -689,33 +689,7 @@ const QuotationGenerator = () => {
                             fontFamily: brandSettings.fontFamily
                         }}>
                             {/* Document Header */}
-                            <div className="taskip-document-header" style={{
-                                display: 'grid',
-                                gridTemplateColumns: '1fr 1fr',
-                                gap: '40px',
-                                marginBottom: '40px',
-                                marginTop: brandSettings.headerStyle === 'corporate' ? '-20px' : '0',
-                                marginLeft: brandSettings.headerStyle === 'corporate' ? '-20px' : '0',
-                                marginRight: brandSettings.headerStyle === 'corporate' ? '-20px' : '0',
-                                paddingBottom: brandSettings.headerStyle === 'modern' ? '30px' :
-                                             brandSettings.headerStyle === 'classic' ? '25px' :
-                                             brandSettings.headerStyle === 'minimal' ? '20px' :
-                                             brandSettings.headerStyle === 'corporate' ? '35px' : '30px',
-                                borderBottom: brandSettings.headerStyle === 'modern' ? `4px solid ${brandSettings.primaryColor}` :
-                                            brandSettings.headerStyle === 'classic' ? `3px double ${brandSettings.headingColor}` :
-                                            brandSettings.headerStyle === 'minimal' ? `1px solid ${brandSettings.borderColor}` :
-                                            brandSettings.headerStyle === 'corporate' ? `5px solid ${brandSettings.primaryColor}` : 
-                                            '2px solid #e2e8f0',
-                                borderTop: brandSettings.headerStyle === 'classic' ? `1px solid ${brandSettings.headingColor}` : 'none',
-                                background: brandSettings.headerStyle === 'modern' ? `linear-gradient(135deg, ${brandSettings.primaryColor}08, transparent)` :
-                                          brandSettings.headerStyle === 'corporate' ? `linear-gradient(135deg, ${brandSettings.primaryColor}25, ${brandSettings.accentColor}15)` : 'transparent',
-                                padding: brandSettings.headerStyle === 'corporate' ? '30px 40px 35px 40px' :
-                                        brandSettings.headerStyle === 'classic' ? '15px 0 25px 0' :
-                                        brandSettings.headerStyle === 'modern' ? '10px 20px 30px 20px' : '0 0 20px 0',
-                                borderRadius: brandSettings.headerStyle === 'modern' ? '8px 8px 0 0' : 
-                                            brandSettings.headerStyle === 'corporate' ? '12px 12px 0 0' : '0',
-                                boxShadow: brandSettings.headerStyle === 'corporate' ? '0 4px 12px rgba(0, 0, 0, 0.05)' : 'none'
-                            }}>
+                            <div className="taskip-document-header">
                                 <div className="taskip-company-info">
                                     {quotationData.company.logo && (
                                         <div style={{marginBottom: '20px', position: 'relative', display: 'inline-block'}}>

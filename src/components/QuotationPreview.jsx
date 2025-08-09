@@ -45,7 +45,7 @@ const QuotationPreview = ({ data, settings }) => {
         <div className="taskip-quotation-preview">
             <div className="taskip-document" id="quotation-preview">
                 <div className="taskip-document-header">
-                    <div className="taskip-company-info">
+                    <div className="taskip-company-section">
                         {company.logo && (
                             <img src={company.logo} alt="Company Logo" className="taskip-logo" />
                         )}
@@ -61,7 +61,7 @@ const QuotationPreview = ({ data, settings }) => {
                         </div>
                     </div>
                     
-                    <div className="taskip-document-info">
+                    <div className="taskip-quotation-meta">
                         <h2 className="taskip-document-title">QUOTATION</h2>
                         <div className={`taskip-status ${getStatusClass(status)}`}>
                             {status.toUpperCase()}
@@ -107,7 +107,7 @@ const QuotationPreview = ({ data, settings }) => {
                         <tbody>
                             {lineItems.map((item, index) => (
                                 <tr key={index}>
-                                    <td>
+                                    <td data-label="Description">
                                         <div className="taskip-item-description">
                                             <strong>{item.description || 'Item description'}</strong>
                                             {item.details && (
@@ -117,9 +117,9 @@ const QuotationPreview = ({ data, settings }) => {
                                             )}
                                         </div>
                                     </td>
-                                    <td>{item.quantity || 1}</td>
-                                    <td>{formatCurrency(item.rate || 0)}</td>
-                                    <td>{formatCurrency((item.quantity || 1) * (item.rate || 0))}</td>
+                                    <td data-label="Qty">{item.quantity || 1}</td>
+                                    <td data-label="Rate">{formatCurrency(item.rate || 0)}</td>
+                                    <td data-label="Amount">{formatCurrency((item.quantity || 1) * (item.rate || 0))}</td>
                                 </tr>
                             ))}
                         </tbody>
