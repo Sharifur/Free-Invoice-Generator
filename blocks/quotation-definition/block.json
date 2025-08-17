@@ -1,0 +1,74 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/quotation-definition",
+    "version": "1.0.0",
+    "title": "Taskip: Quotation Definition",
+    "category": "sig-blocks",
+    "icon": "editor-quote",
+    "description": "Display comprehensive information about business quotations with statistics",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "mainTitle": {
+            "type": "string",
+            "default": "What is a Business Quotation? Complete Definition and Purpose"
+        },
+        "leadText": {
+            "type": "string",
+            "default": "A business quotation, also known as a sales quote or price quote, is a formal document that outlines the proposed price for specific products or services before a sale is confirmed. It serves as a preliminary agreement between a seller and potential buyer, detailing costs, terms, and conditions of the proposed transaction."
+        },
+        "sectionTitle1": {
+            "type": "string",
+            "default": "Understanding the Role of Quotations in Business"
+        },
+        "sectionContent1": {
+            "type": "string",
+            "default": "In today's competitive business environment, a well-crafted quotation can be the difference between winning and losing a deal. Unlike invoices which request payment for completed work, quotations are sent before any work begins. They help businesses communicate pricing transparently and allow customers to compare offers from different suppliers.\n\nA professional quotation demonstrates your business credibility and sets clear expectations for both parties involved in the potential transaction. It's often the first formal document a potential client receives from your business, making it a crucial touchpoint in the customer journey."
+        },
+        "sectionTitle2": {
+            "type": "string",
+            "default": "Why Quotations Matter for Your Business Success"
+        },
+        "sectionContent2": {
+            "type": "string",
+            "default": "Quotations play a crucial role in the sales process by providing prospects with detailed information they need to make informed purchasing decisions. They eliminate ambiguity, prevent misunderstandings, and establish a professional relationship from the start. For businesses, quotations serve as a sales tool that can highlight value propositions and competitive advantages.\n\nWell-designed quotations can increase conversion rates by up to 40% compared to verbal estimates or rough calculations. They provide a written record of what was offered, protecting both parties from future disputes and ensuring everyone is aligned on expectations before work begins."
+        },
+        "stats": {
+            "type": "array",
+            "default": [
+                {
+                    "number": "72%",
+                    "label": "of buyers prefer detailed written quotations"
+                },
+                {
+                    "number": "3x",
+                    "label": "higher close rate with professional quotes"
+                },
+                {
+                    "number": "24hrs",
+                    "label": "optimal response time for quote requests"
+                }
+            ]
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "topPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "bottomPadding": {
+            "type": "number",
+            "default": 80
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/quotation-definition.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css"
+}

@@ -1,0 +1,126 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/common-mistakes",
+    "version": "1.0.0",
+    "title": "Taskip: Common Mistakes",
+    "category": "sig-blocks",
+    "icon": "warning",
+    "description": "Display common mistakes in categorized cards with customizable colors and icons",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "mainTitle": {
+            "type": "string",
+            "default": "Common Quotation Mistakes That Cost You Business"
+        },
+        "leadText": {
+            "type": "string",
+            "default": "Avoid these frequent errors that can damage your professional reputation and lose potential clients. Learning from common mistakes helps you create more effective quotations."
+        },
+        "mistakeCards": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "⚠️",
+                    "title": "Critical Mistakes",
+                    "backgroundColor": "#fef2f2",
+                    "borderColor": "#fecaca",
+                    "mistakes": [
+                        {
+                            "title": "Calculation Errors:",
+                            "description": "Mathematical mistakes instantly damage credibility"
+                        },
+                        {
+                            "title": "Wrong Client Information:",
+                            "description": "Sending quotes with incorrect names or details"
+                        },
+                        {
+                            "title": "Missing Expiry Dates:",
+                            "description": "Leaving yourself exposed to price changes"
+                        },
+                        {
+                            "title": "Hidden Costs:",
+                            "description": "Surprising clients with additional charges later"
+                        }
+                    ]
+                },
+                {
+                    "icon": "⚡",
+                    "title": "Response & Follow-up Mistakes",
+                    "backgroundColor": "#fffbeb",
+                    "borderColor": "#fed7aa",
+                    "mistakes": [
+                        {
+                            "title": "Delayed Response:",
+                            "description": "Taking more than 48 hours loses momentum"
+                        },
+                        {
+                            "title": "No Follow-Up Plan:",
+                            "description": "80% of sales need 5+ touchpoints"
+                        },
+                        {
+                            "title": "Generic Templates:",
+                            "description": "Not personalizing for specific clients"
+                        },
+                        {
+                            "title": "Poor Timing:",
+                            "description": "Sending quotes at inappropriate times"
+                        }
+                    ]
+                },
+                {
+                    "icon": "📝",
+                    "title": "Formatting & Presentation Errors",
+                    "backgroundColor": "#eff6ff",
+                    "borderColor": "#bfdbfe",
+                    "mistakes": [
+                        {
+                            "title": "Unprofessional Design:",
+                            "description": "Poor formatting suggests poor service"
+                        },
+                        {
+                            "title": "Vague Descriptions:",
+                            "description": "Using generic terms without specifics"
+                        },
+                        {
+                            "title": "Missing Contact Info:",
+                            "description": "Making it hard for clients to reach you"
+                        },
+                        {
+                            "title": "No Clear CTA:",
+                            "description": "Not explaining next steps clearly"
+                        }
+                    ]
+                }
+            ]
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "topPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "bottomPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "fullWidth": {
+            "type": "boolean",
+            "default": false
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/common-mistakes.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css"
+}

@@ -1,0 +1,101 @@
+/* FAQ Section Editor Styles */
+.wp-block-sig-quotation-faq {
+    border: 1px dashed #ccd0d4;
+    min-height: 100px;
+}
+
+.wp-block-sig-quotation-faq .quotation-faq-section {
+    position: relative;
+}
+
+/* Disable full-width in editor */
+.wp-block-sig-quotation-faq .quotation-faq-section.full-width {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Editor specific FAQ styling */
+.wp-block-sig-quotation-faq .faq-item {
+    margin-bottom: 15px;
+}
+
+.wp-block-sig-quotation-faq .faq-question {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.wp-block-sig-quotation-faq .faq-answer {
+    display: block !important;
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-top: none;
+}
+
+/* RichText editor styling */
+.wp-block-sig-quotation-faq .rich-text {
+    outline: none;
+}
+
+.wp-block-sig-quotation-faq .rich-text:focus {
+    box-shadow: 0 0 0 1px #007cba;
+}
+
+/* FAQ Management Panel Styles */
+.components-panel__body .faq-management-item {
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.components-panel__body .faq-management-item h4 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #23282d;
+}
+
+.components-panel__body .faq-field-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #555d66;
+}
+
+.components-panel__body .faq-rich-text {
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 3px;
+    background: white;
+    min-height: 40px;
+}
+
+.components-panel__body .faq-rich-text.answer {
+    min-height: 80px;
+}
+
+/* Button styling in panel */
+.components-panel__body .components-button.is-destructive {
+    margin-top: 10px;
+}
+
+.components-panel__body .add-faq-button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* Mobile responsiveness in editor */
+@media (max-width: 768px) {
+    .wp-block-sig-quotation-faq .faq-question {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+    
+    .wp-block-sig-quotation-faq .faq-answer {
+        padding: 0 15px 15px;
+        font-size: 0.9rem;
+    }
+}

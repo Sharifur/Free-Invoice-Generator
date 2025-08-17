@@ -1,0 +1,104 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/essential-components",
+    "version": "1.0.0",
+    "title": "Taskip: Essential Components",
+    "category": "sig-blocks",
+    "icon": "list-view",
+    "description": "Display essential components for professional quotations",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "mainTitle": {
+            "type": "string",
+            "default": "Essential Components Every Professional Quotation Must Include"
+        },
+        "leadText": {
+            "type": "string",
+            "default": "Creating a comprehensive quotation requires attention to detail and inclusion of all necessary elements. Every professional business quotation should include these critical components to ensure clarity, prevent disputes, and maintain legal compliance."
+        },
+        "components": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "📋",
+                    "title": "Unique Quotation Number",
+                    "description": "A sequential identifier for tracking, reference, and record-keeping purposes. This helps both parties refer to specific quotes in future communications. Format example: QT-2024-001"
+                },
+                {
+                    "icon": "📅",
+                    "title": "Issue Date & Validity Period",
+                    "description": "Clearly state when the quote was created and how long the offer remains valid (typically 30-90 days). This creates urgency and protects against price fluctuations."
+                },
+                {
+                    "icon": "🏢",
+                    "title": "Complete Business Information",
+                    "description": "Your company name, registered address, contact details, tax registration numbers (GST/VAT), and business license numbers where applicable."
+                },
+                {
+                    "icon": "👤",
+                    "title": "Detailed Client Information",
+                    "description": "Customer's full name, company name, billing address, shipping address (if different), contact person, phone number, and email address."
+                },
+                {
+                    "icon": "📦",
+                    "title": "Comprehensive Item Description",
+                    "description": "Detailed list of products or services including specifications, model numbers, quantities, unit prices, and line totals. Include images where helpful."
+                },
+                {
+                    "icon": "💰",
+                    "title": "Transparent Pricing Breakdown",
+                    "description": "Subtotal, applicable taxes (itemized), shipping costs, handling fees, discounts applied, and the final total amount in clear currency denomination."
+                },
+                {
+                    "icon": "📄",
+                    "title": "Payment Terms & Conditions",
+                    "description": "Accepted payment methods, payment schedule (if applicable), late payment penalties, and refund/cancellation policies."
+                },
+                {
+                    "icon": "🚚",
+                    "title": "Delivery Information",
+                    "description": "Expected delivery dates, shipping methods, installation requirements, and any dependencies or prerequisites."
+                },
+                {
+                    "icon": "🛡️",
+                    "title": "Warranty & Support Details",
+                    "description": "Product warranties, service guarantees, support terms, and maintenance agreements if applicable."
+                },
+                {
+                    "icon": "✍️",
+                    "title": "Authorized Signature",
+                    "description": "Physical or digital signature of an authorized representative to validate the quotation's authenticity and commitment."
+                }
+            ]
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#f8f9fa"
+        },
+        "topPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "bottomPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "fullWidth": {
+            "type": "boolean",
+            "default": false
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/essential-components.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css"
+}

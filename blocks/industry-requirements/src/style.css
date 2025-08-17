@@ -1,0 +1,147 @@
+/* Industry Requirements Section Styles */
+.industry-requirements-section {
+    padding: 80px 0;
+    background: #f9fafb;
+}
+
+/* Full width support - frontend only */
+body:not(.wp-admin) .industry-requirements-section.full-width {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
+
+.industry-requirements-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.industry-requirements-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #1f2937;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.industry-requirements-section .content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.industry-requirements-section .lead-text {
+    font-size: 1.2rem;
+    color: #6b7280;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.industry-requirements-section .industry-tabs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.industry-requirements-section .industry-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.industry-requirements-section .industry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.industry-requirements-section .industry-card h3 {
+    color: #1f2937;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.industry-requirements-section .industry-card h3 span:first-child {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.industry-requirements-section .industry-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.industry-requirements-section .industry-card li {
+    padding: 8px 0;
+    color: #6b7280;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 20px;
+}
+
+.industry-requirements-section .industry-card li:before {
+    content: "•";
+    color: #2563eb;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.industry-requirements-section .industry-card li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .industry-requirements-section {
+        padding: 60px 0;
+    }
+    
+    .industry-requirements-section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 30px;
+    }
+    
+    .industry-requirements-section .lead-text {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+    
+    .industry-requirements-section .industry-tabs {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    
+    .industry-requirements-section .industry-card {
+        padding: 20px;
+    }
+    
+    .industry-requirements-section .industry-card h3 {
+        font-size: 1.15rem;
+        gap: 8px;
+    }
+    
+    .industry-requirements-section .industry-card h3 span:first-child {
+        font-size: 1.3rem;
+    }
+    
+    .industry-requirements-section .industry-card li {
+        font-size: 0.9rem;
+        padding: 6px 0 6px 16px;
+    }
+}

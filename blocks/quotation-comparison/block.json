@@ -1,0 +1,141 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/quotation-comparison",
+    "version": "1.0.0",
+    "title": "Taskip: Quotation Comparison",
+    "category": "sig-blocks",
+    "icon": "table-row-after",
+    "description": "Compare quotations, estimates, proforma invoices, and invoices with a detailed table",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "mainTitle": {
+            "type": "string",
+            "default": "Quotation vs Estimate vs Proforma Invoice vs Invoice: Clear Differences"
+        },
+        "leadText": {
+            "type": "string",
+            "default": "Understanding the distinctions between these business documents is crucial for proper usage and legal compliance. Many businesses incorrectly use these terms interchangeably, which can lead to confusion and legal issues."
+        },
+        "tableColumns": {
+            "type": "array",
+            "default": [
+                {
+                    "id": "type",
+                    "label": "Document Type",
+                    "key": "type"
+                },
+                {
+                    "id": "purpose",
+                    "label": "Purpose",
+                    "key": "purpose"
+                },
+                {
+                    "id": "whenIssued",
+                    "label": "When Issued",
+                    "key": "whenIssued"
+                },
+                {
+                    "id": "legallyBinding",
+                    "label": "Legally Binding",
+                    "key": "legallyBinding"
+                },
+                {
+                    "id": "canBeChanged",
+                    "label": "Can Be Changed",
+                    "key": "canBeChanged"
+                }
+            ]
+        },
+        "tableData": {
+            "type": "array",
+            "default": [
+                {
+                    "type": "Quotation",
+                    "purpose": "Fixed price offer for specific goods/services",
+                    "whenIssued": "Before work begins",
+                    "legallyBinding": "Yes, when accepted",
+                    "canBeChanged": "No, unless both parties agree"
+                },
+                {
+                    "type": "Estimate",
+                    "purpose": "Approximate cost calculation",
+                    "whenIssued": "During initial discussions",
+                    "legallyBinding": "Generally no",
+                    "canBeChanged": "Yes, final cost may vary ±10-20%"
+                },
+                {
+                    "type": "Proforma Invoice",
+                    "purpose": "Preliminary bill showing commitment",
+                    "whenIssued": "After agreement, before delivery",
+                    "legallyBinding": "No, but shows intent",
+                    "canBeChanged": "Yes, before final invoice"
+                },
+                {
+                    "type": "Invoice",
+                    "purpose": "Request for payment",
+                    "whenIssued": "After delivery/completion",
+                    "legallyBinding": "Yes, payment obligatory",
+                    "canBeChanged": "Only through credit notes"
+                }
+            ]
+        },
+        "detailsTitle": {
+            "type": "string",
+            "default": "When to Use Each Document"
+        },
+        "detailsList": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Quotation:",
+                    "description": "When you can provide exact pricing and want to lock in terms"
+                },
+                {
+                    "label": "Estimate:",
+                    "description": "For projects with undefined scope or variable requirements"
+                },
+                {
+                    "label": "Proforma Invoice:",
+                    "description": "For international trade, customs, or advance payments"
+                },
+                {
+                    "label": "Invoice:",
+                    "description": "To request payment for completed work or delivered goods"
+                }
+            ]
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "topPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "bottomPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "fullWidth": {
+            "type": "boolean",
+            "default": false
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": false
+        },
+        "showDetails": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/quotation-comparison.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css"
+}

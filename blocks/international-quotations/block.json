@@ -1,0 +1,102 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/international-quotations",
+    "version": "1.0.0",
+    "title": "Taskip: International Quotations",
+    "category": "sig-blocks",
+    "icon": "admin-site-alt3",
+    "description": "Display international business considerations in organized cards with customizable content",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "mainTitle": {
+            "type": "string",
+            "default": "International Quotations: Global Business Considerations"
+        },
+        "leadText": {
+            "type": "string",
+            "default": "Expanding internationally requires understanding additional quotation complexities. Master these elements to successfully quote for global clients."
+        },
+        "internationalCards": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "💱",
+                    "title": "Currency Management",
+                    "borderColor": "#f59e0b",
+                    "items": [
+                        "Specify currency clearly (USD, EUR, GBP, etc.)",
+                        "Include exchange rate date references",
+                        "Offer local currency pricing when possible",
+                        "Add currency fluctuation clauses (±3-5%)",
+                        "Consider hedging strategies for large deals"
+                    ]
+                },
+                {
+                    "icon": "📦",
+                    "title": "International Trade Terms",
+                    "borderColor": "#f59e0b",
+                    "items": [
+                        "Use Incoterms 2020 (FOB, CIF, EXW, DDP)",
+                        "Clarify customs duty responsibilities",
+                        "Specify required trade documentation",
+                        "Include certificate of origin requirements",
+                        "Detail inspection and quality control procedures"
+                    ]
+                },
+                {
+                    "icon": "🌍",
+                    "title": "Cultural Considerations",
+                    "borderColor": "#f59e0b",
+                    "items": [
+                        "Provide translations when necessary",
+                        "Respect local business customs",
+                        "Consider time zones for deadlines",
+                        "Understand negotiation styles by region",
+                        "Account for local holidays and observances"
+                    ]
+                },
+                {
+                    "icon": "⚖️",
+                    "title": "Legal & Compliance",
+                    "borderColor": "#f59e0b",
+                    "items": [
+                        "Specify governing law and arbitration",
+                        "Include export control compliance",
+                        "Address sanctions and embargoes",
+                        "Consider local tax implications",
+                        "Include force majeure for international events"
+                    ]
+                }
+            ]
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "topPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "bottomPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "fullWidth": {
+            "type": "boolean",
+            "default": false
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/international-quotations.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css"
+}

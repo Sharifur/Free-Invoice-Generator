@@ -1,0 +1,120 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/digital-transformation",
+    "version": "1.0.0",
+    "title": "Taskip: Digital Transformation",
+    "category": "sig-blocks",
+    "icon": "laptop",
+    "description": "Display digital transformation benefits in organized sections with customizable content",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "mainTitle": {
+            "type": "string",
+            "default": "Digital Transformation: Modern Quotation Management Systems"
+        },
+        "leadText": {
+            "type": "string",
+            "default": "The digital revolution has transformed how businesses create, send, and manage quotations. Modern quotation software and online generators offer advantages that manual processes can't match."
+        },
+        "benefitSections": {
+            "type": "array",
+            "default": [
+                {
+                    "icon": "⚡",
+                    "title": "Automation Benefits",
+                    "benefits": [
+                        {
+                            "title": "80% Time Reduction:",
+                            "description": "Create quotes in minutes, not hours"
+                        },
+                        {
+                            "title": "Zero Calculation Errors:",
+                            "description": "Automatic tax and discount computations"
+                        },
+                        {
+                            "title": "Brand Consistency:",
+                            "description": "Standardized templates across all quotes"
+                        },
+                        {
+                            "title": "Real-time Tracking:",
+                            "description": "Monitor quote status and client interactions"
+                        }
+                    ]
+                },
+                {
+                    "icon": "🔗",
+                    "title": "Integration Capabilities",
+                    "benefits": [
+                        {
+                            "title": "CRM Integration:",
+                            "description": "Pull client data automatically"
+                        },
+                        {
+                            "title": "Inventory Sync:",
+                            "description": "Ensure accurate pricing and availability"
+                        },
+                        {
+                            "title": "Accounting Links:",
+                            "description": "Seamless quote-to-invoice conversion"
+                        },
+                        {
+                            "title": "Email Automation:",
+                            "description": "Scheduled follow-ups and reminders"
+                        }
+                    ]
+                },
+                {
+                    "icon": "📊",
+                    "title": "Analytics & Insights",
+                    "benefits": [
+                        {
+                            "title": "Conversion Metrics:",
+                            "description": "Track quote-to-close ratios"
+                        },
+                        {
+                            "title": "Product Performance:",
+                            "description": "Identify top-selling items"
+                        },
+                        {
+                            "title": "Pricing Optimization:",
+                            "description": "Find ideal price points"
+                        },
+                        {
+                            "title": "Team Analytics:",
+                            "description": "Monitor response times and success rates"
+                        }
+                    ]
+                }
+            ]
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "topPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "bottomPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "fullWidth": {
+            "type": "boolean",
+            "default": false
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/digital-transformation.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css"
+}

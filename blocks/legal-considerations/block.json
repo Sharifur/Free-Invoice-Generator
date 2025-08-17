@@ -1,0 +1,95 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/legal-considerations",
+    "version": "1.0.0",
+    "title": "Taskip: Legal Considerations",
+    "category": "sig-blocks",
+    "icon": "shield",
+    "description": "Display legal considerations and compliance information in a structured grid layout",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "mainTitle": {
+            "type": "string",
+            "default": "Legal Considerations and Compliance for Business Quotations"
+        },
+        "leadText": {
+            "type": "string",
+            "default": "While quotations aren't always legally binding documents, they can become enforceable contracts under certain conditions. Understanding the legal implications helps protect your business and maintain professional relationships."
+        },
+        "legalCards": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "When Quotations Become Binding",
+                    "description": "In most jurisdictions, a quotation becomes a legally binding contract when formally accepted by the client within the validity period. Acceptance can be verbal, written, or implied through actions (such as making a deposit). Once accepted, neither party can unilaterally change the terms without mutual agreement.",
+                    "listItems": [
+                        "Written acceptance via email or signed document",
+                        "Verbal agreement recorded or witnessed",
+                        "Partial payment or deposit made",
+                        "Commencement of work based on quotation"
+                    ]
+                },
+                {
+                    "title": "Essential Legal Disclaimers to Include",
+                    "description": "Protect your business by including clear statements about:",
+                    "listItems": [
+                        "Price validity period and expiration date",
+                        "Circumstances affecting pricing (material costs, exchange rates)",
+                        "Force majeure clauses for unforeseen events",
+                        "Limitation of liability statements",
+                        "Governing law and jurisdiction for disputes",
+                        "Intellectual property rights",
+                        "Confidentiality agreements"
+                    ]
+                },
+                {
+                    "title": "Tax Compliance Requirements",
+                    "description": "Ensure your quotations comply with local tax regulations:",
+                    "listItems": [
+                        "Include tax registration numbers (GST/VAT/EIN)",
+                        "Clearly state whether prices include or exclude taxes",
+                        "Specify applicable tax rates for each item",
+                        "Follow country-specific format requirements",
+                        "Include harmonized system codes for international trade"
+                    ]
+                },
+                {
+                    "title": "Record Keeping Obligations",
+                    "description": "Many jurisdictions require businesses to maintain quotation records for tax and audit purposes:",
+                    "listItems": [
+                        "Keep copies of all quotations issued (accepted and declined)",
+                        "Maintain records for required period (typically 5-7 years)",
+                        "Store digital copies in unalterable format",
+                        "Include in regular backup procedures",
+                        "Ensure accessibility for tax audits"
+                    ]
+                }
+            ]
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "topPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "bottomPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "fullWidth": {
+            "type": "boolean",
+            "default": false
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/legal-considerations.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css"
+}

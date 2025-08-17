@@ -57,6 +57,14 @@
         "bottomPadding": {
             "type": "number",
             "default": 80
+        },
+        "fullWidth": {
+            "type": "boolean",
+            "default": false
+        },
+        "showIcons": {
+            "type": "boolean",
+            "default": true
         }
     },
     "textdomain": "simple-invoice-generator",

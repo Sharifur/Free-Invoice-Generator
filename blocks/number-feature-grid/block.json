@@ -1,0 +1,69 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/number-feature-grid",
+    "version": "1.0.0",
+    "title": "Taskip: Number Feature Grid",
+    "category": "sig-blocks",
+    "icon": "grid-view",
+    "description": "Display numbered features in a responsive grid layout with customizable content",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "mainTitle": {
+            "type": "string",
+            "default": "10 Proven Best Practices for Creating Quotations That Convert"
+        },
+        "leadText": {
+            "type": "string",
+            "default": "Transform your quotations from simple price lists into powerful sales tools by following these industry-proven strategies that top-performing businesses use to win more deals."
+        },
+        "features": {
+            "type": "array",
+            "default": [
+                {
+                    "number": "1",
+                    "title": "Speed is Critical - Respond Within 24 Hours",
+                    "description": "Studies show that businesses responding to quote requests within 24 hours are 7x more likely to win the deal. Set up templates and systems to enable rapid response while maintaining accuracy."
+                },
+                {
+                    "number": "2",
+                    "title": "Personalization Wins Deals",
+                    "description": "Address the client by name, reference their specific requirements, and demonstrate understanding of their unique challenges. Generic quotes have 40% lower acceptance rates."
+                },
+                {
+                    "number": "3",
+                    "title": "Professional Presentation Matters",
+                    "description": "Use clean, branded templates with your logo, consistent fonts, and professional formatting. First impressions count - a polished quote reflects your business quality."
+                }
+            ]
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "topPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "bottomPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "fullWidth": {
+            "type": "boolean",
+            "default": false
+        },
+        "showNumbers": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/number-feature-grid.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css"
+}

@@ -1,0 +1,63 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "sig/quotation-faq",
+    "version": "1.0.0",
+    "title": "Taskip: FAQ Section",
+    "category": "sig-blocks",
+    "icon": "editor-help",
+    "description": "Display frequently asked questions with collapsible answers, rich text support, and FAQ schema markup",
+    "supports": {
+        "html": false,
+        "align": ["wide", "full"],
+        "alignWide": true
+    },
+    "attributes": {
+        "mainTitle": {
+            "type": "string",
+            "default": "Frequently Asked Questions About Our Quotation Generator"
+        },
+        "faqItems": {
+            "type": "array",
+            "default": [
+                {
+                    "question": "Is the quotation generator really free?",
+                    "answer": "Yes, our quotation generator is 100% free forever. You can create unlimited quotations without any hidden charges, subscription fees, or credit card requirements. We believe in providing essential business tools that help companies grow without financial barriers."
+                },
+                {
+                    "question": "Do I need to create an account to use the quotation maker?",
+                    "answer": "No account is required to start creating quotations immediately. However, creating a free account allows you to save your business details, maintain a client database, access quotation history, and use advanced features like quote-to-invoice conversion."
+                },
+                {
+                    "question": "Can I customize the quotation format and add my company logo?",
+                    "answer": "Absolutely! You can upload your company logo, choose from professional templates, customize colors to match your brand, add custom fields, and modify the layout. Our quotation generator gives you complete control over the appearance of your documents."
+                }
+            ]
+        },
+        "backgroundColor": {
+            "type": "string",
+            "default": "#f9fafb"
+        },
+        "topPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "bottomPadding": {
+            "type": "number",
+            "default": 80
+        },
+        "fullWidth": {
+            "type": "boolean",
+            "default": false
+        },
+        "enableSchemaMarkup": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+    "textdomain": "simple-invoice-generator",
+    "editorScript": "file:../../dist/quotation-faq.js",
+    "editorStyle": "file:./src/editor.css",
+    "style": "file:./src/style.css",
+    "script": "file:./src/frontend.js"
+}

@@ -9,7 +9,8 @@ import {
     PanelBody,
     TextControl,
     Button,
-    RangeControl
+    RangeControl,
+    ToggleControl
 } from '@wordpress/components';
 import { Fragment } from '@wordpress/element';
 
@@ -20,7 +21,9 @@ export default function Edit({ attributes, setAttributes }) {
         backgroundColor,
         features,
         topPadding,
-        bottomPadding
+        bottomPadding,
+        fullWidth,
+        showIcons
     } = attributes;
 
     const blockProps = useBlockProps({
@@ -55,6 +58,15 @@ export default function Edit({ attributes, setAttributes }) {
     return (
         <Fragment>
             <InspectorControls>
+                <PanelBody title={__('Layout Settings', 'simple-invoice-generator')}>
+                    <ToggleControl
+                        label={__('Full Width', 'simple-invoice-generator')}
+                        checked={fullWidth}
+                        onChange={(value) => setAttributes({ fullWidth: value })}
+                        help={__('Make section background span full browser width', 'simple-invoice-generator')}
+                    />
+                </PanelBody>
+                
                 <PanelColorSettings
                     title={__('Color Settings', 'simple-invoice-generator')}
                     colorSettings={[
@@ -65,6 +77,15 @@ export default function Edit({ attributes, setAttributes }) {
                         }
                     ]}
                 />
+
+                <PanelBody title={__('Display Settings', 'simple-invoice-generator')}>
+                    <ToggleControl
+                        label={__('Show Icons', 'simple-invoice-generator')}
+                        checked={showIcons}
+                        onChange={(value) => setAttributes({ showIcons: value })}
+                        help={__('Toggle to show or hide feature icons', 'simple-invoice-generator')}
+                    />
+                </PanelBody>
 
                 <PanelBody title={__('Features Management', 'simple-invoice-generator')} initialOpen={false}>
                     <Button isPrimary onClick={addFeature}>
@@ -93,7 +114,7 @@ export default function Edit({ attributes, setAttributes }) {
             </InspectorControls>
 
             <section {...blockProps}>
-                <div className="container">
+                <div className="ib-container">
                     <div className="ib-section-header">
                         <RichText
                             tagName="h2"
@@ -109,9 +130,9 @@ export default function Edit({ attributes, setAttributes }) {
                         />
                     </div>
 
-                    <div className="features-grid">
+                    <div className="ib-features-grid">
                         {features.map((feature, index) => (
-                            <div key={index} className="feature-card">
+                            <div key={index} className="ib-feature-card">
                                 <div className="ib-feature-controls">
                                     <Button
                                         isDestructive
@@ -122,18 +143,20 @@ export default function Edit({ attributes, setAttributes }) {
                                     </Button>
                                 </div>
 
-                                <div className="feature-icon">
-                                    <TextControl
-                                        value={feature.icon}
-                                        onChange={(value) => updateFeature(index, 'icon', value)}
-                                        placeholder="⚡"
-                                        label={__('Icon (emoji)', 'simple-invoice-generator')}
-                                    />
-                                </div>
+                                {showIcons && (
+                                    <div className="feature-icon">
+                                        <TextControl
+                                            value={feature.icon}
+                                            onChange={(value) => updateFeature(index, 'icon', value)}
+                                            placeholder="⚡"
+                                            label={__('Icon (emoji)', 'simple-invoice-generator')}
+                                        />
+                                    </div>
+                                )}
 
                                 <RichText
                                     tagName="h3"
-                                    className="feature-title"
+                                    className="ib-feature-title"
                                     value={feature.title}
                                     onChange={(value) => updateFeature(index, 'title', value)}
                                     placeholder={__('Feature title...', 'simple-invoice-generator')}
@@ -141,7 +164,7 @@ export default function Edit({ attributes, setAttributes }) {
 
                                 <RichText
                                     tagName="p"
-                                    className="feature-description"
+                                    className="ib-feature-description"
                                     value={feature.description}
                                     onChange={(value) => updateFeature(index, 'description', value)}
                                     placeholder={__('Feature description...', 'simple-invoice-generator')}
