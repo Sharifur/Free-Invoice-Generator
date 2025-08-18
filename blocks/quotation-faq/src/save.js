@@ -20,16 +20,16 @@ export default function save({ attributes }) {
         }
     });
 
-    // Store FAQ data for PHP schema generation
+    // Store FAQ data for PHP schema generation - Google format
     const schemaData = enableSchemaMarkup && faqItems.length ? {
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": faqItems.map(item => ({
             "@type": "Question",
-            "name": item.question.replace(/<[^>]*>/g, ''), // Strip HTML tags
+            "name": item.question.replace(/<[^>]*>/g, ''), // Strip HTML tags from question
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": item.answer.replace(/<[^>]*>/g, '') // Strip HTML tags
+                "text": item.answer // Keep HTML in answer for rich formatting
             }
         }))
     } : null;
