@@ -102,6 +102,11 @@ export default function Edit({ attributes, setAttributes }) {
             <InspectorControls>
                 <PanelBody title={__('Hero Settings', 'simple-invoice-generator')}>
                     <TextControl
+                        label={__('Button Text', 'simple-invoice-generator')}
+                        value={buttonText}
+                        onChange={(value) => setAttributes({ buttonText: value })}
+                    />
+                    <TextControl
                         label={__('Button Link', 'simple-invoice-generator')}
                         value={buttonLink}
                         onChange={(value) => setAttributes({ buttonLink: value })}
